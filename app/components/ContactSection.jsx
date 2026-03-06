@@ -15,10 +15,10 @@ const stagger = {
 };
 
 const contactInfo = [
-  { icon: Phone,   titulo: 'Teléfono',   valor: '+593 99 948 2328', href: 'tel:+593999482328' },
+  { icon: Phone,   titulo: 'Teléfono',   valor: '+593 96 278 8765', href: 'tel:+593962788765' },
   { icon: Mail,    titulo: 'Email',      valor: 'ventas@campusradices.com', href: 'mailto:ventas@campusradices.com' },
   { icon: Clock,   titulo: 'Horario',    valor: 'Lunes a Domingo · 08:00 – 18:00', href: null },
-  { icon: MapPin,  titulo: 'Emergencias',valor: 'Disponible 24/7', href: 'tel:+593999482328' },
+  { icon: MapPin,  titulo: 'Emergencias',valor: 'Disponible 24/7', href: 'tel:+593962788765' },
 ];
 
 const inputClass =
