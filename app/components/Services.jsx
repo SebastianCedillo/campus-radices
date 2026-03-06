@@ -18,61 +18,55 @@ const services = [
     imagen: '/images/servicios/salas-velacion.jpg',
     nombre: 'Salas de Velación',
     descripcion:
-      'Ambientes cálidos y acogedores donde las familias pueden compartir amor y recuerdos en la despedida, con total privacidad y confort para todos.',
+      'Espacios diseñados para brindar un ambiente familiar y acogedor donde las familias puedan compartir el recuerdo y el amor en la despedida.',
   },
   {
     imagen: '/images/servicios/cremacion.jpg',
     nombre: 'Servicio de Cremación',
     descripcion:
-      'Proceso especializado que honra con amor y respeto a tu ser querido, preservando su esencia en un acto íntimo y digno que resguarda la memoria.',
+      'El proyecto contempla servicios de cremación que permitirán a las familias honrar a su ser querido en un acto íntimo y digno.',
   },
   {
     imagen: '/images/servicios/inhumacion.jpg',
     nombre: 'Servicio de Inhumación',
     descripcion:
-      'Diversas opciones como bóvedas, nichos, osarios, cenizarios y mausoleos, adaptados a las preferencias y tradiciones de cada familia.',
+      'El campus contemplará diferentes alternativas para la disposición final: bóvedas, nichos, osarios, cenizarios y mausoleos familiares.',
   },
   {
     imagen: '/images/servicios/capilla.jpg',
     nombre: 'Capilla',
     descripcion:
-      'Espacio solemne acondicionado con amor para celebrar actos religiosos y dar la última despedida con dignidad espiritual y comodidad.',
+      'Dentro del desarrollo del campus se proyecta la construcción de una capilla destinada a ceremonias religiosas y actos de despedida en un entorno de recogimiento y respeto.',
   },
   {
     imagen: '/images/servicios/capilla-domicilio.jpg',
     nombre: 'Capilla Ardiente a Domicilio',
     descripcion:
-      'Servicio que permite mantener a tu ser querido en tu hogar durante las últimas horas, respetando tus preferencias y comodidad familiar.',
-  },
-  {
-    imagen: '/images/servicios/formolizacion.jpg',
-    nombre: 'Formolización',
-    descripcion:
-      'Procedimiento especializado que permite preservar temporalmente el cuerpo, garantizando condiciones adecuadas para la velación y una despedida digna.',
+      'Como parte del acompañamiento a las familias, se contemplan servicios de velación domiciliaria cuando así lo requieran.',
   },
   {
     imagen: '/images/servicios/tanatopraxia.jpg',
-    nombre: 'Tanatopraxia',
+    nombre: 'Tanatopraxia y Preparación',
     descripcion:
-      'Preparación profesional bajo estrictos protocolos de higiene que permite que la imagen del ser querido refleje serenidad y dignidad en la despedida.',
+      'Se contemplan procesos profesionales de preparación y preservación del cuerpo bajo protocolos de respeto y cuidado.',
   },
   {
     imagen: '/images/servicios/arreglos-florales.jpg',
     nombre: 'Arreglos Florales',
     descripcion:
-      'Hermosos arreglos florales que representan amor eterno y profundo respeto, ayudándote a expresar tus sentimientos en la despedida.',
+      'Servicios florales que permitirán a las familias expresar el homenaje y el amor hacia su ser querido.',
   },
   {
     imagen: '/images/servicios/cafeteria.jpg',
     nombre: 'Cafetería',
     descripcion:
-      'Servicio de cafetería con diferentes opciones disponibles durante todo el día y en los horarios de velación para la comodidad de los familiares.',
+      'El campus contemplará espacios destinados a servicios de cafetería para acompañar a las familias durante las velaciones.',
   },
   {
     imagen: '/images/servicios/tramites-legales.jpg',
     nombre: 'Trámites Legales',
     descripcion:
-      'Orientación y gestión completa en certificados médicos, registro civil, permisos de cremación, herencias y todos los trámites necesarios.',
+      'Se brindará orientación en trámites relacionados con certificado médico de defunción, inscripción en Registro Civil, permisos de cremación, reclamo de montepío, orientación sobre herencias y otros procesos necesarios.',
   },
 ];
 

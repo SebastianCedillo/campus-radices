@@ -24,10 +24,11 @@ const stagger = {
 
 const whyPlanItems = [
   'Evitar cargas económicas inesperadas',
-  'Tomar decisiones con serenidad y sin presión',
-  'Proteger la unión familiar en momentos difíciles',
-  'Garantizar una despedida digna para quienes amas',
-  'Asegurar espacios y servicios en el campus',
+  'Tomar decisiones con serenidad',
+  'Proteger la unión familiar',
+  'Garantizar una despedida digna',
+  'Asegurar espacios dentro del campus',
+  'Evitar decisiones difíciles en momentos de dolor',
 ];
 
 export default function Home() {
@@ -129,17 +130,16 @@ export default function Home() {
             <motion.p variants={fadeUp}
               className="text-lg md:text-xl text-radices-text font-body leading-relaxed mb-6"
             >
-              Campus Radices nace del profundo deseo de su fundador de ofrecer a las familias
-              de Esmeraldas un espacio digno, organizado y verdaderamente humano, donde la
-              memoria sea honrada con respeto y donde la previsión permita vivir los momentos
-              de despedida con serenidad.
+              Campus Radices nace del deseo de ofrecer a las familias de Esmeraldas un espacio
+              digno, organizado y verdaderamente humano, donde la memoria sea honrada con
+              respeto y donde la planificación permita vivir los momentos de despedida con serenidad.
             </motion.p>
             <motion.p variants={fadeUp}
               className="text-lg text-radices-text font-body leading-relaxed"
             >
-              Somos un proyecto privado de alto valor social, dedicado a la planificación
-              funeraria responsable, la preservación de la memoria familiar y el
-              acompañamiento humano permanente, bajo una visión ética, ordenada y sostenible.
+              Campus Radices es un proyecto privado de alto valor social orientado a la
+              planificación funeraria responsable, la preservación de la memoria familiar y el
+              acompañamiento humano, desarrollado bajo una visión ética, organizada y sostenible.
             </motion.p>
             <motion.blockquote variants={fadeUp}
               className="mt-10 text-xl md:text-2xl font-display italic text-radices-dark border-l-4 border-radices-light pl-6 text-left max-w-2xl mx-auto"
