@@ -43,7 +43,7 @@ export default function CorporateValues() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Nuestros Valores Corporativos
+            Valores que guían nuestro proyecto
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}

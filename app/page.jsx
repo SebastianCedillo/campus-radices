@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle2 } from 'lucide-react';
 import HowWeSupport    from '@/app/components/HowWeSupport';
@@ -36,10 +37,16 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{ background: 'linear-gradient(145deg, #1e3d0f 0%, #2e5a1f 45%, #4a7d3e 100%)' }}
-      >
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Campus Radices"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-radices-darker/80" />
+
         {/* Decorative rings */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full border border-white/5" />
@@ -135,6 +142,12 @@ export default function Home() {
               respeto y donde la planificación permita vivir los momentos de despedida con serenidad.
             </motion.p>
             <motion.p variants={fadeUp}
+              className="text-lg text-radices-text font-body leading-relaxed mb-6"
+            >
+              Creemos firmemente que la paz familiar no debe improvisarse. Por eso nuestro
+              principio fundamental es: <em>«La paz también se planifica.»</em>
+            </motion.p>
+            <motion.p variants={fadeUp}
               className="text-lg text-radices-text font-body leading-relaxed"
             >
               Campus Radices es un proyecto privado de alto valor social orientado a la
@@ -176,9 +189,28 @@ export default function Home() {
               <motion.h2 variants={fadeUp}
                 className="text-4xl md:text-5xl font-display text-radices-darker mb-6 leading-tight"
               >
-                ¿Por qué planificar con anticipación?
+                Prever es un acto de amor
               </motion.h2>
               <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-8 rounded-full" />
+              <motion.div variants={stagger} className="space-y-4 mb-8 text-radices-text font-body text-lg leading-relaxed">
+                <motion.p variants={fadeUp}>
+                  Muchas familias enfrentan decisiones difíciles en momentos de dolor.
+                </motion.p>
+                <motion.p variants={fadeUp}>
+                  Cuando una pérdida ocurre de manera inesperada, deben tomarse decisiones
+                  importantes bajo presión emocional y urgencia.
+                </motion.p>
+                <motion.p variants={fadeUp}>
+                  La planificación funeraria permite cambiar esa realidad. Planificar con
+                  anticipación es una forma de proteger a la familia, evitar cargas económicas
+                  inesperadas y tomar decisiones con serenidad y claridad.
+                </motion.p>
+              </motion.div>
+              <motion.h3 variants={fadeUp}
+                className="text-xl font-display text-radices-darker mb-5"
+              >
+                ¿Por qué planificar con anticipación?
+              </motion.h3>
               <motion.ul variants={stagger} className="space-y-4">
                 {whyPlanItems.map((item, i) => (
                   <motion.li key={i} variants={fadeUp} className="flex items-start gap-3">

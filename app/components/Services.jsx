@@ -91,15 +91,35 @@ export default function Services() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Nuestros Servicios
+            Servicios proyectados del Campus
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-2xl mx-auto"
+            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-4"
           >
-            Las raíces no solo sostienen: nutren, conectan y dan permanencia. Por eso Campus Radices
-            ofrece soluciones integrales para acompañarte en cada etapa del proceso de despedida.
+            Campus Radices ha sido concebido como un campus funerario integral que contemplará
+            distintos espacios y servicios diseñados para acompañar a las familias en cada etapa
+            del proceso de despedida.
           </motion.p>
+          <motion.p variants={fadeUp}
+            className="text-base text-radices-text/80 font-body max-w-2xl mx-auto"
+          >
+            Entre los servicios proyectados dentro del desarrollo del campus se contemplan:
+          </motion.p>
+        </motion.div>
+
+        {/* AVISO PROYECTO EN DESARROLLO */}
+        <motion.div
+          className="mb-10 bg-radices-darker/5 border border-radices-darker/15 rounded-xl px-6 py-4 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-sm text-radices-darker/70 font-body italic">
+            Campus Radices es un proyecto en desarrollo cuya infraestructura será implementada
+            progresivamente conforme a su plan maestro.
+          </p>
         </motion.div>
 
         {/* GRID DE SERVICIOS */}

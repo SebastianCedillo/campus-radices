@@ -61,14 +61,14 @@ export default function ContactSection() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Contáctanos
+            Planifica con amor y responsabilidad desde hoy
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
             className="text-lg text-radices-text font-body max-w-2xl mx-auto"
           >
-            En Campus Radices estamos disponibles para apoyarte en todo momento.
-            Comunícate con nosotros sin compromiso.
+            Un asesor de Campus Radices está listo para orientarte y presentarte las mejores
+            alternativas para proteger a tu familia.
           </motion.p>
         </motion.div>
 

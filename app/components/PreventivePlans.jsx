@@ -15,7 +15,7 @@ const stagger = {
 
 const benefits = [
   'Planificar con anticipación',
-  'Congelar precios actuales',
+  'Congelar precios',
   'Organizar decisiones importantes',
   'Proteger a los seres queridos',
   'Evitar cargas económicas inesperadas',
@@ -42,14 +42,24 @@ export default function PreventivePlans() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Planes de Previsión Funeraria
+            Planes funerarios prepagados
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
+            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
+          >
+            La planificación funeraria es una forma de cuidar a la familia incluso cuando ya no estemos.
+          </motion.p>
+          <motion.p variants={fadeUp}
+            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
+          >
+            Tomar decisiones con anticipación permite que los momentos de despedida puedan vivirse
+            con serenidad, respeto y unión familiar.
+          </motion.p>
+          <motion.p variants={fadeUp}
             className="text-lg text-radices-text font-body max-w-3xl mx-auto"
           >
-            Campus Radices ofrece planes de previsión que permiten a las familias planificar con
-            anticipación y tranquilidad, protegiendo a sus seres queridos ante cualquier eventualidad.
+            Campus Radices nace precisamente con ese propósito.
           </motion.p>
         </motion.div>
 
@@ -97,16 +107,18 @@ export default function PreventivePlans() {
           >
             <div className="p-10 text-white">
               <h3 className="text-2xl md:text-3xl font-display mb-4 leading-snug">
-                Elige el Plan Adecuado para Tu Familia
+                Planificar hoy es proteger a quienes amas
               </h3>
               <p className="font-body text-white/75 leading-relaxed mb-5">
-                Un asesor especializado de Campus Radices está disponible para ayudarte a
-                elegir el plan que mejor se adapte a las necesidades y valores de tu familia.
-                Cada plan es flexible y personalizable.
+                La planificación funeraria es una forma de cuidar a la familia incluso cuando
+                ya no estemos.
               </p>
-              <p className="font-body text-white/70 leading-relaxed">
-                Te guiaremos a través de todas las opciones disponibles para que tomes la
-                mejor decisión con toda la información necesaria.
+              <p className="font-body text-white/70 leading-relaxed mb-5">
+                Tomar decisiones con anticipación permite que los momentos de despedida puedan
+                vivirse con serenidad, respeto y unión familiar.
+              </p>
+              <p className="font-body text-white/65 leading-relaxed">
+                Campus Radices nace precisamente con ese propósito.
               </p>
             </div>
 
