@@ -25,10 +25,8 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-400 ${
-        scrolled
-          ? 'bg-radices-darker/96 backdrop-blur-md shadow-2xl'
-          : 'bg-radices-darker'
+      className={`sticky top-0 z-50 transition-all duration-400 bg-radices-darker ${
+        scrolled ? 'shadow-2xl' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
