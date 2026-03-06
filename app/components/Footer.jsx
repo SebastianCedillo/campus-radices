@@ -88,7 +88,7 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href="https://wa.me/593999482328"
+                href="https://wa.me/593962788765"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
@@ -120,7 +120,7 @@ export default function Footer() {
             {/* Redes */}
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com/campusradices"
+                href="https://www.instagram.com/campusradices/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

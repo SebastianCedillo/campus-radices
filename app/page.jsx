@@ -10,6 +10,7 @@ import ContactSection  from '@/app/components/ContactSection';
 import MissionVision   from '@/app/components/MissionVision';
 import CorporateValues from '@/app/components/CorporateValues';
 import LegalProcedures from '@/app/components/LegalProcedures';
+import WhatsAppFloat   from '@/app/components/WhatsAppFloat';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -234,6 +235,9 @@ export default function Home() {
 
       {/* ═══ CONTACTO ════════════════════════════════════════════════════════ */}
       <ContactSection />
+
+      {/* ═══ BOTÓN FLOTANTE WHATSAPP ══════════════════════════════════════════ */}
+      <WhatsAppFloat />
 
     </div>
   );

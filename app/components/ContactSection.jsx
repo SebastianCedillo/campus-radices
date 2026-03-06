@@ -110,7 +110,7 @@ export default function ContactSection() {
             {/* WhatsApp CTA */}
             <motion.div variants={fadeUp}>
               <a
-                href="https://wa.me/593999482328"
+                href="https://wa.me/593962788765"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#25D366] text-white font-semibold rounded-full hover:bg-[#1ebe5a] transition-all duration-300 hover:shadow-lg mb-10"
@@ -127,7 +127,7 @@ export default function ContactSection() {
               <p className="text-sm font-semibold text-radices-darker mb-4">Síguenos en redes</p>
               <div className="flex gap-3">
                 <a
-                  href="https://instagram.com/campusradices"
+                  href="https://www.instagram.com/campusradices/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"

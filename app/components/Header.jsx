@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Phone } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 
 const navLinks = [
@@ -55,10 +55,12 @@ export default function Header() {
           {/* CTA DESKTOP */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+593999482328"
+              href="https://wa.me/593962788765"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-all duration-300 hover:shadow-lg hover:shadow-radices-light/30"
             >
-              <Phone size={14} />
+              <MessageCircle size={14} />
               Emergencia 24/7
             </a>
           </div>
@@ -92,10 +94,12 @@ export default function Header() {
             ))}
             <div className="px-4 pt-3">
               <a
-                href="tel:+593999482328"
+                href="https://wa.me/593962788765"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-colors"
               >
-                <Phone size={14} />
+                <MessageCircle size={14} />
                 Emergencia 24/7
               </a>
             </div>
