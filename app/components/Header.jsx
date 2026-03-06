@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 
@@ -14,23 +14,16 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [isOpen,   setIsOpen]   = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-radices-darker w-full ${
-        scrolled ? 'shadow-2xl' : ''
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center" style={{ height: '80px' }}>
+    <>
+      {/* NAVBAR — altura fija, nada dentro puede cambiarla */}
+      <header
+        className="fixed top-0 left-0 right-0 z-50 bg-radices-darker w-full shadow-lg"
+        style={{ height: '80px' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
 
           {/* LOGO */}
           <Link href="/" className="hover:opacity-90 transition-opacity">
@@ -75,35 +68,39 @@ export default function Header() {
               <span className={`block h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
             </div>
           </button>
-        </div>
 
-        {/* MENÚ MOBILE */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-4' : 'max-h-0'}`}>
-          <div className="border-t border-white/10 pt-4 space-y-1">
-            {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2.5 text-sm font-body text-white/75 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="px-4 pt-3">
-              <a
-                href="https://wa.me/593962788765"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-colors"
-              >
-                <MessageCircle size={14} />
-                Emergencia 24/7
-              </a>
-            </div>
+        </div>
+      </header>
+
+      {/* MENÚ MOBILE — elemento separado, fijo debajo del navbar */}
+      <div
+        className={`md:hidden fixed left-0 right-0 z-40 bg-radices-darker overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+        style={{ top: '80px' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 pt-4 pb-4 space-y-1">
+          {navLinks.map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2.5 text-sm font-body text-white/75 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="px-4 pt-3">
+            <a
+              href="https://wa.me/593962788765"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-colors"
+            >
+              <MessageCircle size={14} />
+              Emergencia 24/7
+            </a>
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
