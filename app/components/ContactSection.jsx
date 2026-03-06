@@ -140,7 +140,9 @@ export default function ContactSection() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/campusradices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"
                   aria-label="Facebook"
                 >
@@ -149,7 +151,9 @@ export default function ContactSection() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/campusradices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"
                   aria-label="TikTok"
                 >

@@ -133,7 +133,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/campusradices/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="w-9 h-9 bg-white/8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-radices-light transition-all duration-300"
               >
@@ -142,7 +144,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/campusradices/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="TikTok"
                 className="w-9 h-9 bg-white/8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-radices-light transition-all duration-300"
               >
