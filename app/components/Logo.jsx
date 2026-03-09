@@ -49,13 +49,13 @@ export default function Logo({ size = 48, showText = true, textColor = 'light' }
       {showText && (
         <div className="flex flex-col leading-none">
           <span
-            className="text-[10px] tracking-[0.25em] font-semibold uppercase"
+            className="text-[11px] tracking-[0.3em] font-semibold uppercase"
             style={{ color: campusColor }}
           >
             Campus
           </span>
           <span
-            className="text-[1.45rem] font-display font-bold leading-tight tracking-wide"
+            className="text-[1.65rem] font-display font-bold leading-tight tracking-wide"
             style={{ color: radicesColor }}
           >
             RADICES
