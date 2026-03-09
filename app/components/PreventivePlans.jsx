@@ -117,8 +117,11 @@ export default function PreventivePlans() {
                 Tomar decisiones con anticipación permite que los momentos de despedida puedan
                 vivirse con serenidad, respeto y unión familiar.
               </p>
-              <p className="font-body text-white/65 leading-relaxed">
+              <p className="font-body text-white/65 leading-relaxed mb-5">
                 Campus Radices nace precisamente con ese propósito.
+              </p>
+              <p className="font-body text-white/65 leading-relaxed">
+                Un asesor especializado podrá orientar a cada familia para elegir la alternativa más adecuada.
               </p>
             </div>
 
