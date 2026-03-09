@@ -1,67 +1,58 @@
-export default function Logo({ size = 48, showText = true, textColor = 'light' }) {
-  // textColor: 'light' = white text (for dark backgrounds), 'dark' = dark text (for light backgrounds)
-  const campusColor = textColor === 'light' ? '#8cc543' : '#5a8e2a';
-  const radicesColor = textColor === 'light' ? '#ffffff' : '#1e3d0f';
-
+export default function Logo({ size = 48 }) {
   return (
-    <div className="flex items-center gap-3">
-      {/* SVG icon — approximate representation of the Campus Radices mark */}
-      <svg
-        width={size}
-        height={size}
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        {/* Circle border */}
-        <circle cx="50" cy="50" r="47" fill="white" stroke="#6ab233" strokeWidth="3.5" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Campus Radices"
+    >
+      {/* Fondo blanco + borde verde */}
+      <circle cx="100" cy="100" r="96" fill="white" stroke="#4a7d3e" strokeWidth="6" />
 
-        {/* Center leaf (pointing up) */}
-        <path
-          d="M50,29 C48,24 44,17 50,10 C56,17 52,24 50,29Z"
-          fill="#8cc543"
-        />
-        {/* Left leaf */}
-        <path
-          d="M46,30 C43,26 36,22 31,18 C34,23 40,27 46,30Z"
-          fill="#8cc543"
-        />
-        {/* Right leaf */}
-        <path
-          d="M54,30 C57,26 64,22 69,18 C66,23 60,27 54,30Z"
-          fill="#8cc543"
-        />
+      {/* Hoja central (apunta arriba) */}
+      <path d="M100,56 C97,45 91,31 100,19 C109,31 103,45 100,56Z" fill="#8cc543" />
+      {/* Hoja izquierda */}
+      <path d="M93,58 C86,49 73,41 62,34 C68,44 81,51 93,58Z" fill="#8cc543" />
+      {/* Hoja derecha */}
+      <path d="M107,58 C114,49 127,41 138,34 C132,44 119,51 107,58Z" fill="#8cc543" />
 
-        {/* Trunk */}
-        <line x1="50" y1="29" x2="50" y2="52" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
+      {/* Tronco */}
+      <line x1="100" y1="56" x2="100" y2="110" stroke="#8b6535" strokeWidth="8" strokeLinecap="round" />
 
-        {/* Roots — fan pattern */}
-        <line x1="50" y1="52" x2="11" y2="68" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="22" y2="65" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="33" y2="61" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="42" y2="57" stroke="#8b6535" strokeWidth="2" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="58" y2="57" stroke="#8b6535" strokeWidth="2" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="67" y2="61" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="78" y2="65" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="50" y1="52" x2="89" y2="68" stroke="#8b6535" strokeWidth="2.5" strokeLinecap="round" />
-      </svg>
+      {/* Raíces — abanico amplio */}
+      <line x1="100" y1="110" x2="12"  y2="136" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
+      <line x1="100" y1="110" x2="30"  y2="128" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
+      <line x1="100" y1="110" x2="52"  y2="122" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="100" y1="110" x2="76"  y2="116" stroke="#8b6535" strokeWidth="3"   strokeLinecap="round" />
+      <line x1="100" y1="110" x2="124" y2="116" stroke="#8b6535" strokeWidth="3"   strokeLinecap="round" />
+      <line x1="100" y1="110" x2="148" y2="122" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="100" y1="110" x2="170" y2="128" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
+      <line x1="100" y1="110" x2="188" y2="136" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
 
-      {showText && (
-        <div className="flex flex-col leading-none">
-          <span
-            className="text-[11px] tracking-[0.3em] font-semibold uppercase"
-            style={{ color: campusColor }}
-          >
-            Campus
-          </span>
-          <span
-            className="text-[1.65rem] font-display font-bold leading-tight tracking-wide"
-            style={{ color: radicesColor }}
-          >
-            RADICES
-          </span>
-        </div>
-      )}
-    </div>
+      {/* Texto CAMPUS */}
+      <text
+        x="100"
+        y="153"
+        textAnchor="middle"
+        fontFamily="Lora, Georgia, serif"
+        fontSize="14"
+        fontWeight="600"
+        letterSpacing="7"
+        fill="#4a7d3e"
+      >CAMPUS</text>
+
+      {/* Texto RADICES */}
+      <text
+        x="100"
+        y="182"
+        textAnchor="middle"
+        fontFamily="Lora, Georgia, serif"
+        fontSize="34"
+        fontWeight="700"
+        letterSpacing="2"
+        fill="#1e3d0f"
+      >RADICES</text>
+    </svg>
   );
 }

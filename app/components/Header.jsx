@@ -44,7 +44,7 @@ export default function Header() {
 
           {/* LOGO */}
           <Link href="/" className="hover:opacity-90 transition-opacity">
-            <Logo size={54} />
+            <Logo size={60} />
           </Link>
 
           {/* NAV DESKTOP */}
