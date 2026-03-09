@@ -38,13 +38,13 @@ export default function Header() {
       {/* NAVBAR — altura fija, nada dentro puede cambiarla */}
       <header
         className="fixed top-0 left-0 right-0 z-50 bg-radices-darker w-full shadow-lg transition-transform duration-300"
-        style={{ height: '80px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)' }}
+        style={{ height: '96px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
 
           {/* LOGO */}
           <Link href="/" className="hover:opacity-90 transition-opacity">
-            <Logo size={68} />
+            <Logo size={84} />
           </Link>
 
           {/* NAV DESKTOP */}
@@ -92,7 +92,7 @@ export default function Header() {
       {/* MENÚ MOBILE — elemento separado, fijo debajo del navbar */}
       <div
         className={`md:hidden fixed left-0 right-0 z-40 bg-radices-darker overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
-        style={{ top: '80px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)', visibility: hidden ? 'hidden' : 'visible' }}
+        style={{ top: '96px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)', visibility: hidden ? 'hidden' : 'visible' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 pt-4 pb-4 space-y-1">
           {navLinks.map(link => (
