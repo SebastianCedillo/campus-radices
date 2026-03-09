@@ -7,7 +7,7 @@ export default function Logo({ size = 48 }) {
       alt="Campus Radices"
       width={size}
       height={size}
-      style={{ objectFit: 'contain' }}
+      style={{ objectFit: 'contain', borderRadius: '50%' }}
       priority
     />
   );
