@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle2 } from 'lucide-react';
+import Logo from '@/app/components/Logo';
 import HowWeSupport    from '@/app/components/HowWeSupport';
 import Services        from '@/app/components/Services';
 import MemorialSpaces  from '@/app/components/MemorialSpaces';
@@ -56,6 +57,10 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.div variants={stagger} initial="hidden" animate="show">
+
+            <motion.div variants={fadeUp} className="flex justify-center mb-8">
+              <Logo size={150} />
+            </motion.div>
 
             <motion.p variants={fadeUp}
               className="text-radices-light text-xs font-semibold tracking-[0.3em] uppercase mb-8"
