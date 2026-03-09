@@ -23,7 +23,7 @@ export default function Footer() {
           {/* MARCA */}
           <div className="md:col-span-1">
             <div className="mb-5">
-              <Logo size={80} />
+              <Logo size={80} variant="dark" />
             </div>
             <p className="text-white/60 font-body text-sm leading-relaxed">
               Servicios funerarios integrales, dignos y planificados para las familias

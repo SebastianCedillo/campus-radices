@@ -1,4 +1,12 @@
-export default function Logo({ size = 48 }) {
+// variant="light" → fondo blanco, texto oscuro (sobre fondos claros o navbar oscuro)
+// variant="dark"  → fondo transparente, texto claro (sobre fondos oscuros: hero, footer)
+export default function Logo({ size = 48, variant = 'light' }) {
+  const isDark = variant === 'dark';
+  const circleFill   = isDark ? 'transparent'    : 'white';
+  const circleStroke = isDark ? '#8cc543'         : '#4a7d3e';
+  const campusColor  = isDark ? '#8cc543'         : '#4a7d3e';
+  const radicesColor = isDark ? '#ffffff'         : '#1e3d0f';
+
   return (
     <svg
       width={size}
@@ -7,8 +15,8 @@ export default function Logo({ size = 48 }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Campus Radices"
     >
-      {/* Fondo blanco + borde verde */}
-      <circle cx="100" cy="100" r="96" fill="white" stroke="#4a7d3e" strokeWidth="6" />
+      {/* Borde del círculo */}
+      <circle cx="100" cy="100" r="96" fill={circleFill} stroke={circleStroke} strokeWidth="6" />
 
       {/* Hoja central (apunta arriba) */}
       <path d="M100,52 C97,38 89,22 100,10 C111,22 103,38 100,52Z" fill="#8cc543" />
@@ -39,7 +47,7 @@ export default function Logo({ size = 48 }) {
         fontSize="13"
         fontWeight="600"
         letterSpacing="7"
-        fill="#4a7d3e"
+        fill={campusColor}
       >CAMPUS</text>
 
       {/* Texto RADICES */}
@@ -51,7 +59,7 @@ export default function Logo({ size = 48 }) {
         fontSize="33"
         fontWeight="700"
         letterSpacing="2"
-        fill="#1e3d0f"
+        fill={radicesColor}
       >RADICES</text>
     </svg>
   );

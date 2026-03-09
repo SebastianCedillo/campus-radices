@@ -59,7 +59,7 @@ export default function Home() {
           <motion.div variants={stagger} initial="hidden" animate="show">
 
             <motion.div variants={fadeUp} className="flex justify-center mb-8">
-              <Logo size={150} />
+              <Logo size={150} variant="dark" />
             </motion.div>
 
             <motion.p variants={fadeUp}
