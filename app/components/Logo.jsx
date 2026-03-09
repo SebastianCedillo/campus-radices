@@ -2,10 +2,10 @@
 // variant="dark"  → fondo transparente, texto claro (sobre fondos oscuros: hero, footer)
 export default function Logo({ size = 48, variant = 'light' }) {
   const isDark = variant === 'dark';
-  const circleFill   = isDark ? 'transparent'    : 'white';
-  const circleStroke = isDark ? '#8cc543'         : '#4a7d3e';
-  const campusColor  = isDark ? '#8cc543'         : '#4a7d3e';
-  const radicesColor = isDark ? '#ffffff'         : '#1e3d0f';
+  const circleFill   = isDark ? 'transparent' : 'white';
+  const circleStroke = isDark ? '#5a8e2a'     : '#5a8e2a';
+  const campusColor  = isDark ? '#8cc543'     : '#5a8e2a';
+  const radicesColor = isDark ? '#ffffff'     : '#1e3d0f';
 
   return (
     <svg
@@ -15,50 +15,67 @@ export default function Logo({ size = 48, variant = 'light' }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Campus Radices"
     >
-      {/* Borde del círculo */}
-      <circle cx="100" cy="100" r="96" fill={circleFill} stroke={circleStroke} strokeWidth="6" />
+      {/* Círculo */}
+      <circle cx="100" cy="100" r="96" fill={circleFill} stroke={circleStroke} strokeWidth="5" />
 
-      {/* Hoja central (apunta arriba) */}
-      <path d="M100,52 C97,38 89,22 100,10 C111,22 103,38 100,52Z" fill="#8cc543" />
-      {/* Hoja izquierda */}
-      <path d="M92,55 C83,44 68,35 54,27 C62,40 77,48 92,55Z" fill="#8cc543" />
-      {/* Hoja derecha */}
-      <path d="M108,55 C117,44 132,35 146,27 C138,40 123,48 108,55Z" fill="#8cc543" />
+      {/* Hoja central — apunta hacia arriba */}
+      <path
+        d="M100,60 C96,48 93,34 100,20 C107,34 104,48 100,60Z"
+        fill="#8cc543"
+      />
+      {/* Hoja izquierda — diagonal superior izquierda */}
+      <path
+        d="M94,57 C87,47 76,37 63,30 C68,42 80,50 94,57Z"
+        fill="#8cc543"
+      />
+      {/* Hoja derecha — diagonal superior derecha */}
+      <path
+        d="M106,57 C113,47 124,37 137,30 C132,42 120,50 106,57Z"
+        fill="#8cc543"
+      />
 
       {/* Tronco */}
-      <line x1="100" y1="52" x2="100" y2="114" stroke="#8b6535" strokeWidth="9" strokeLinecap="round" />
+      <path
+        d="M96,60 Q98,82 100,105 Q102,82 104,60"
+        fill="#8b6535"
+        stroke="#8b6535" strokeWidth="1"
+      />
 
-      {/* Raíces — abanico amplio */}
-      <line x1="100" y1="114" x2="8"   y2="143" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
-      <line x1="100" y1="114" x2="26"  y2="134" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
-      <line x1="100" y1="114" x2="50"  y2="127" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
-      <line x1="100" y1="114" x2="76"  y2="120" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
-      <line x1="100" y1="114" x2="124" y2="120" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
-      <line x1="100" y1="114" x2="150" y2="127" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
-      <line x1="100" y1="114" x2="174" y2="134" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
-      <line x1="100" y1="114" x2="192" y2="143" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
+      {/* Raíces — abanico con 10 ramas, simétricas */}
+      {/* Izquierda */}
+      <line x1="100" y1="105" x2="12"  y2="128" stroke="#8b6535" strokeWidth="5"   strokeLinecap="round" />
+      <line x1="100" y1="105" x2="28"  y2="122" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
+      <line x1="100" y1="105" x2="48"  y2="117" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
+      <line x1="100" y1="105" x2="70"  y2="113" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="100" y1="105" x2="86"  y2="110" stroke="#8b6535" strokeWidth="3"   strokeLinecap="round" />
+      {/* Derecha */}
+      <line x1="100" y1="105" x2="114" y2="110" stroke="#8b6535" strokeWidth="3"   strokeLinecap="round" />
+      <line x1="100" y1="105" x2="130" y2="113" stroke="#8b6535" strokeWidth="3.5" strokeLinecap="round" />
+      <line x1="100" y1="105" x2="152" y2="117" stroke="#8b6535" strokeWidth="4"   strokeLinecap="round" />
+      <line x1="100" y1="105" x2="172" y2="122" stroke="#8b6535" strokeWidth="4.5" strokeLinecap="round" />
+      <line x1="100" y1="105" x2="188" y2="128" stroke="#8b6535" strokeWidth="5"   strokeLinecap="round" />
 
       {/* Texto CAMPUS */}
       <text
         x="100"
-        y="160"
+        y="148"
         textAnchor="middle"
-        fontFamily="Lora, Georgia, serif"
-        fontSize="13"
-        fontWeight="600"
-        letterSpacing="7"
+        fontFamily="Montserrat, Arial, sans-serif"
+        fontSize="14"
+        fontWeight="500"
+        letterSpacing="5"
         fill={campusColor}
       >CAMPUS</text>
 
       {/* Texto RADICES */}
       <text
         x="100"
-        y="185"
+        y="178"
         textAnchor="middle"
-        fontFamily="Lora, Georgia, serif"
-        fontSize="33"
+        fontFamily="Montserrat, Arial, sans-serif"
+        fontSize="36"
         fontWeight="700"
-        letterSpacing="2"
+        letterSpacing="1"
         fill={radicesColor}
       >RADICES</text>
     </svg>
