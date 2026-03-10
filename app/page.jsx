@@ -38,18 +38,20 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-radices-cream">
+      <section className="relative min-h-screen flex overflow-hidden bg-radices-cream">
 
         {/* Textura sutil de fondo */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#e8ddd0_0%,_transparent_60%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_#d4c4b0_0%,_transparent_50%)] pointer-events-none" />
 
-        {/* DOS COLUMNAS */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 py-28 flex flex-col lg:flex-row items-center gap-12">
+        {/* DOS COLUMNAS — altura completa */}
+        <div className="relative z-10 w-full flex flex-col lg:flex-row lg:items-stretch"
+          style={{ minHeight: '100vh' }}
+        >
 
           {/* TEXTO — izquierda */}
           <motion.div
-            className="w-full lg:w-[40%] shrink-0 text-center lg:text-left"
+            className="w-full lg:w-[40%] shrink-0 flex flex-col justify-center text-center lg:text-left px-6 lg:px-16 py-20"
             variants={stagger} initial="hidden" animate="show"
           >
             <motion.p variants={fadeUp}
@@ -96,65 +98,70 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* PLANO — con zoom interactivo */}
+          {/* PLANO — ocupa toda la altura, con zoom interactivo */}
           <motion.div
-            className="flex flex-1 items-center justify-center"
+            className="flex-1 relative"
+            style={{ minHeight: '60vh' }}
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
           >
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 5 }}
-              transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
-              className="relative w-full max-w-[500px] lg:max-w-[720px] rounded-lg overflow-hidden"
-              style={{ filter: 'drop-shadow(0 25px 50px rgba(44,31,20,0.18))' }}
+            {/* Contenedor que llena toda la columna */}
+            <div
+              className="absolute inset-0 p-4 lg:p-6"
+              style={{ filter: 'drop-shadow(0 25px 50px rgba(44,31,20,0.15))' }}
             >
-              <TransformWrapper
-                initialScale={1}
-                minScale={0.8}
-                maxScale={6}
-                centerOnInit
-                wheel={{ step: 0.1 }}
-              >
-                {({ zoomIn, zoomOut, resetTransform }) => (
-                  <>
-                    {/* Controles */}
-                    <div className="absolute top-2 right-2 z-20 flex flex-col gap-1">
-                      <button
-                        onClick={() => zoomIn()}
-                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
-                        aria-label="Acercar"
-                      >+</button>
-                      <button
-                        onClick={() => zoomOut()}
-                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
-                        aria-label="Alejar"
-                      >−</button>
-                      <button
-                        onClick={() => resetTransform()}
-                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker text-xs flex items-center justify-center hover:bg-white shadow-sm transition-colors"
-                        aria-label="Restablecer"
-                      >↺</button>
-                    </div>
-                    <TransformComponent wrapperStyle={{ width: '100%' }} contentStyle={{ width: '100%' }}>
-                      <Image
-                        src="/images/plano-hd.png"
-                        alt="Plano maestro Campus Radices"
-                        width={720}
-                        height={560}
-                        className="w-full rounded-lg"
-                        priority
-                      />
-                    </TransformComponent>
-                  </>
-                )}
-              </TransformWrapper>
-              {/* Hint */}
-              <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-radices-darker/50 bg-white/60 backdrop-blur-sm rounded-full px-3 py-1 pointer-events-none whitespace-nowrap">
-                Pellizca o usa la rueda para hacer zoom
-              </p>
-            </motion.div>
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                <TransformWrapper
+                  initialScale={1}
+                  minScale={0.3}
+                  maxScale={6}
+                  centerOnInit
+                  wheel={{ step: 0.1 }}
+                >
+                  {({ zoomIn, zoomOut, resetTransform }) => (
+                    <>
+                      {/* Controles */}
+                      <div className="absolute top-2 right-2 z-20 flex flex-col gap-1">
+                        <button
+                          onClick={() => zoomIn()}
+                          className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                          aria-label="Acercar"
+                        >+</button>
+                        <button
+                          onClick={() => zoomOut()}
+                          className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                          aria-label="Alejar"
+                        >−</button>
+                        <button
+                          onClick={() => resetTransform()}
+                          className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker text-xs flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                          aria-label="Restablecer"
+                        >↺</button>
+                      </div>
+                      <TransformComponent
+                        wrapperStyle={{ width: '100%', height: '100%' }}
+                        contentStyle={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                      >
+                        <Image
+                          src="/images/plano-hd.png"
+                          alt="Plano maestro Campus Radices"
+                          width={1200}
+                          height={930}
+                          className="rounded-xl"
+                          style={{ width: 'auto', height: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                          priority
+                        />
+                      </TransformComponent>
+                    </>
+                  )}
+                </TransformWrapper>
+              </div>
+            </div>
+            {/* Hint */}
+            <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-radices-darker/50 bg-white/60 backdrop-blur-sm rounded-full px-3 py-1 pointer-events-none whitespace-nowrap z-10">
+              Pellizca o usa la rueda para hacer zoom
+            </p>
           </motion.div>
 
         </div>
