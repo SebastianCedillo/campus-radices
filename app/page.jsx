@@ -6,6 +6,7 @@ import { ChevronDown, CheckCircle2 } from 'lucide-react';
 import Logo           from '@/app/components/Logo';
 import BrandMessage   from '@/app/components/BrandMessage';
 import MissionVision  from '@/app/components/MissionVision';
+import CampusPlan    from '@/app/components/CampusPlan';
 import MemorialSpaces from '@/app/components/MemorialSpaces';
 import Services       from '@/app/components/Services';
 import PreventivePlans from '@/app/components/PreventivePlans';
@@ -111,6 +112,9 @@ export default function Home() {
 
       {/* ═══ MISIÓN Y VISIÓN ═════════════════════════════════════════════════ */}
       <MissionVision />
+
+      {/* ═══ PLANO MAESTRO ═══════════════════════════════════════════════════ */}
+      <CampusPlan />
 
       {/* ═══ ¿POR QUÉ PLANIFICAR? ════════════════════════════════════════════ */}
       <section className="py-24 px-4 bg-white">
