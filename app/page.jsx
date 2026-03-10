@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle2 } from 'lucide-react';
 import Logo           from '@/app/components/Logo';
@@ -116,10 +117,23 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
 
-            {/* LEFT: imagen placeholder */}
-            <div className="bg-radices-gray rounded-2xl h-80 flex items-center justify-center">
-              <p className="text-radices-darker/30 font-body text-sm">Imagen familiar</p>
-            </div>
+            {/* LEFT: imagen familiar */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg"
+            >
+              <Image
+                src="/images/familia-planificacion.jpg"
+                alt="Familia planificando su tranquilidad con anticipación"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-radices-darker/20 to-transparent" />
+            </motion.div>
 
             {/* RIGHT: contenido */}
             <motion.div
