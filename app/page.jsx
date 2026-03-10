@@ -95,9 +95,9 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* PLANO — derecha, completo y rotado */}
+          {/* PLANO — derecha en desktop, abajo en móvil */}
           <motion.div
-            className="hidden lg:flex flex-1 items-center justify-center"
+            className="flex flex-1 items-center justify-center"
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
@@ -114,7 +114,7 @@ export default function Home() {
                 alt="Plano maestro Campus Radices"
                 width={720}
                 height={560}
-                className="w-full max-w-[720px] rounded-lg"
+                className="w-full max-w-[500px] lg:max-w-[720px] rounded-lg"
                 priority
               />
             </motion.div>
