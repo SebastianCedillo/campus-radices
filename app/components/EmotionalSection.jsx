@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -17,15 +18,22 @@ export default function EmotionalSection() {
     <section className="py-24 px-4 bg-radices-gray">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* LEFT: placeholder imagen emocional */}
+          {/* LEFT: imagen emocional familiar */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="rounded-2xl overflow-hidden bg-radices-cream h-80 md:h-[420px] flex items-center justify-center shadow-card order-2 md:order-1"
+            className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg order-2 md:order-1"
           >
-            <p className="text-radices-darker/30 font-body text-sm">Familia abrazándose o caminando</p>
+            <Image
+              src="/images/familia-emocional.jpg"
+              alt="Familia unida en un momento de serenidad"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-radices-darker/20 to-transparent" />
           </motion.div>
           {/* RIGHT: texto */}
           <motion.div

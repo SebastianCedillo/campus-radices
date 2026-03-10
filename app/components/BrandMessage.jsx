@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -33,15 +34,22 @@ export default function BrandMessage() {
               Campus Radices nace con un propósito claro: ofrecer a las familias un espacio digno donde la memoria, la tranquilidad y la previsión puedan organizarse con tiempo.
             </motion.p>
           </motion.div>
-          {/* RIGHT: placeholder imagen familiar */}
+          {/* RIGHT: imagen familiar */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="rounded-2xl overflow-hidden bg-radices-gray h-80 md:h-[420px] flex items-center justify-center shadow-card"
+            className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg"
           >
-            <p className="text-radices-darker/30 font-body text-sm">Imagen familiar</p>
+            <Image
+              src="/images/familia-mensaje.jpg"
+              alt="Familia unida planificando su tranquilidad"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-radices-darker/20 to-transparent" />
           </motion.div>
         </div>
       </div>
