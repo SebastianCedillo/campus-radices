@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle2 } from 'lucide-react';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import HowWeSupport    from '@/app/components/HowWeSupport';
 import Services        from '@/app/components/Services';
 import MemorialSpaces  from '@/app/components/MemorialSpaces';
@@ -95,7 +96,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* PLANO — derecha en desktop, abajo en móvil */}
+          {/* PLANO — con zoom interactivo */}
           <motion.div
             className="flex flex-1 items-center justify-center"
             initial={{ opacity: 0, x: 60 }}
@@ -106,17 +107,53 @@ export default function Home() {
               initial={{ rotate: 0 }}
               animate={{ rotate: 5 }}
               transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
-              className="relative"
+              className="relative w-full max-w-[500px] lg:max-w-[720px] rounded-lg overflow-hidden"
               style={{ filter: 'drop-shadow(0 25px 50px rgba(44,31,20,0.18))' }}
             >
-              <Image
-                src="/images/plano-hd.png"
-                alt="Plano maestro Campus Radices"
-                width={720}
-                height={560}
-                className="w-full max-w-[500px] lg:max-w-[720px] rounded-lg"
-                priority
-              />
+              <TransformWrapper
+                initialScale={1}
+                minScale={0.8}
+                maxScale={6}
+                centerOnInit
+                wheel={{ step: 0.1 }}
+              >
+                {({ zoomIn, zoomOut, resetTransform }) => (
+                  <>
+                    {/* Controles */}
+                    <div className="absolute top-2 right-2 z-20 flex flex-col gap-1">
+                      <button
+                        onClick={() => zoomIn()}
+                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                        aria-label="Acercar"
+                      >+</button>
+                      <button
+                        onClick={() => zoomOut()}
+                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker font-bold text-lg flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                        aria-label="Alejar"
+                      >−</button>
+                      <button
+                        onClick={() => resetTransform()}
+                        className="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-lg text-radices-darker text-xs flex items-center justify-center hover:bg-white shadow-sm transition-colors"
+                        aria-label="Restablecer"
+                      >↺</button>
+                    </div>
+                    <TransformComponent wrapperStyle={{ width: '100%' }} contentStyle={{ width: '100%' }}>
+                      <Image
+                        src="/images/plano-hd.png"
+                        alt="Plano maestro Campus Radices"
+                        width={720}
+                        height={560}
+                        className="w-full rounded-lg"
+                        priority
+                      />
+                    </TransformComponent>
+                  </>
+                )}
+              </TransformWrapper>
+              {/* Hint */}
+              <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-radices-darker/50 bg-white/60 backdrop-blur-sm rounded-full px-3 py-1 pointer-events-none whitespace-nowrap">
+                Pellizca o usa la rueda para hacer zoom
+              </p>
             </motion.div>
           </motion.div>
 
