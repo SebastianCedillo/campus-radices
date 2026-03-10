@@ -3,8 +3,8 @@ import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 
 export const metadata = {
-  title: 'Campus Radices — Planificación Funeraria Responsable | Esmeraldas',
-  description: 'Campus Radices: servicios funerarios integrales, dignos y planificados en Esmeraldas, Ecuador. La paz también se planifica.',
+  title: 'Campus Radices — Planificación Memorial | Esmeraldas',
+  description: 'Campus Radices: espacio memorial para la planificación familiar en Esmeraldas, Ecuador. Preserva la memoria con dignidad.',
   keywords: 'funeraria esmeraldas, servicios funerarios, cremación, inhumación, campus radices, planificación funeraria',
 };
 

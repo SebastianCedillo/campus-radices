@@ -8,18 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'radices-darker': '#2c1f14',
-        'radices-dark':   '#6b4c30',
-        'radices-mid':    '#a07850',
-        'radices-light':  '#c8a97a',
-        'radices-brown':  '#8b6535',
-        'radices-gray':   '#f5efe8',
-        'radices-cream':  '#faf6f0',
-        'radices-text':   '#3d2b1f',
+        'radices-darker': '#3A322B',
+        'radices-dark':   '#A67C52',
+        'radices-mid':    '#B08968',
+        'radices-light':  '#C6A47A',
+        'radices-cream':  '#EDE5DE',
+        'radices-gray':   '#F5F0EB',
+        'radices-text':   '#3A322B',
+        'radices-btn-hover': '#9C7255',
       },
       fontFamily: {
-        'display': ['Lora', 'serif'],
-        'body':    ['Crimson Text', 'serif'],
+        'display': ['Playfair Display', 'serif'],
+        'sub':     ['Cormorant', 'serif'],
+        'body':    ['Inter', 'sans-serif'],
       },
       boxShadow: {
         'card':       '0 2px 16px rgba(0,0,0,0.07)',

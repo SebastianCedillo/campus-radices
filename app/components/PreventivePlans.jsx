@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle2, PhoneCall } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -37,29 +37,18 @@ export default function PreventivePlans() {
           <motion.span variants={fadeUp}
             className="text-xs font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4"
           >
-            Previsión funeraria
+            Planificación anticipada
           </motion.span>
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Planes funerarios prepagados
+            Planes de previsión
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
-          >
-            La planificación funeraria es una forma de cuidar a la familia incluso cuando ya no estemos.
-          </motion.p>
-          <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
-          >
-            Tomar decisiones con anticipación permite que los momentos de despedida puedan vivirse
-            con serenidad, respeto y unión familiar.
-          </motion.p>
-          <motion.p variants={fadeUp}
             className="text-lg text-radices-text font-body max-w-3xl mx-auto"
           >
-            Campus Radices nace precisamente con ese propósito.
+            La planificación anticipada permite asegurar espacios memoriales y organizar cada decisión con tranquilidad, evitando presiones emocionales y económicas en momentos difíciles.
           </motion.p>
         </motion.div>
 
@@ -86,15 +75,6 @@ export default function PreventivePlans() {
                 </motion.li>
               ))}
             </motion.ul>
-
-            <motion.blockquote
-              variants={fadeUp}
-              className="mt-10 border-l-4 border-radices-light pl-6"
-            >
-              <p className="text-xl font-display italic text-radices-dark leading-snug">
-                "Planificar hoy es un acto de amor que brinda tranquilidad mañana."
-              </p>
-            </motion.blockquote>
           </motion.div>
 
           {/* CTA CARD */}
@@ -107,31 +87,19 @@ export default function PreventivePlans() {
           >
             <div className="p-10 text-white">
               <h3 className="text-2xl md:text-3xl font-display mb-4 leading-snug">
-                Planificar hoy es proteger a quienes amas
+                Planificar hoy es proteger a quienes amas.
               </h3>
-              <p className="font-body text-white/75 leading-relaxed mb-5">
-                La planificación funeraria es una forma de cuidar a la familia incluso cuando
-                ya no estemos.
-              </p>
-              <p className="font-body text-white/70 leading-relaxed mb-5">
-                Tomar decisiones con anticipación permite que los momentos de despedida puedan
-                vivirse con serenidad, respeto y unión familiar.
-              </p>
-              <p className="font-body text-white/65 leading-relaxed mb-5">
-                Campus Radices nace precisamente con ese propósito.
-              </p>
-              <p className="font-body text-white/65 leading-relaxed">
-                Un asesor especializado podrá orientar a cada familia para elegir la alternativa más adecuada.
+              <p className="font-body text-white/75 leading-relaxed">
+                Un asesor de Campus Radices puede orientarte para elegir la alternativa más adecuada para tu familia.
               </p>
             </div>
 
             <div className="px-10 pb-10 space-y-4">
               <a
                 href="#contacto"
-                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-mid transition-all duration-300 hover:shadow-lg hover:shadow-radices-light/30"
+                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-lg"
               >
-                <PhoneCall size={18} />
-                Contactar asesor especializado
+                Solicitar asesoría
               </a>
               <p className="text-center text-xs text-white/45 font-body">
                 Consulta inicial sin costo · Atención personalizada

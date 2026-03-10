@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Leaf } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -14,46 +14,11 @@ const stagger = {
 };
 
 const spaces = [
-  {
-    imagen: '/images/espacios/lotes.jpg',
-    nombre: 'Lotes',
-    descripcion: 'Terrenos disponibles en nuestro campus funerario donde puedes crear un espacio personalizado que refleje la memoria de tu ser querido con dignidad.',
-  },
-  {
-    imagen: '/images/espacios/bovedas.jpg',
-    nombre: 'Bóvedas',
-    descripcion: 'Estructuras seguras y duraderas que ofrecen protección perpetua, disponibles en diferentes diseños y materiales para honrar la memoria familiar.',
-  },
-  {
-    imagen: '/images/espacios/bovedas-mausoleo.jpg',
-    nombre: 'Bóvedas de Mausoleo',
-    descripcion: 'Construcciones monumentales que permiten albergar múltiples familias, creando un legado perdurable y un lugar de encuentro generacional.',
-  },
-  {
-    imagen: '/images/espacios/nichos.jpg',
-    nombre: 'Nichos',
-    descripcion: 'Espacios compactos y accesibles ideales para urnas, disponibles en diferentes ubicaciones del campus con fácil mantenimiento y visita.',
-  },
-  {
-    imagen: '/images/espacios/osarios.jpg',
-    nombre: 'Osarios',
-    descripcion: 'Espacios especiales diseñados para la disposición de restos óseos, respetando tradiciones y preferencias familiares con dignidad.',
-  },
-  {
-    imagen: '/images/espacios/cenizarios.jpg',
-    nombre: 'Cenizarios',
-    descripcion: 'Estructuras especializadas para depositar cenizas, disponibles en diversos diseños que permiten un descanso eterno personalizado.',
-  },
-  {
-    imagen: '/images/espacios/mausoleos.jpg',
-    nombre: 'Mausoleos',
-    descripcion: 'Construcciones privadas de gran valor arquitectónico, ideales para familias que desean un monumento único y distintivo en el campus.',
-  },
-  {
-    imagen: '/images/espacios/arbol-vida.jpg',
-    nombre: 'Árbol de Vida',
-    descripcion: 'Espacio simbólico y ecológico donde las cenizas se dispersan en la naturaleza, creando un legado vivo que perdura en el tiempo.',
-  },
+  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales.' },
+  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Cenizarios para resguardo de urnas.' },
+  { nombre: 'Osarios Radices Altum',     descripcion: 'Osarios memoriales.' },
+  { nombre: 'Panteón Familiar Radices',  descripcion: 'Panteones familiares.' },
+  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Mausoleos familiares.' },
 ];
 
 export default function MemorialSpaces() {
@@ -83,14 +48,13 @@ export default function MemorialSpaces() {
           <motion.p variants={fadeUp}
             className="text-lg text-radices-text font-body max-w-2xl mx-auto"
           >
-            Diversas opciones para crear un espacio duradero que honre la memoria de quienes
-            amamos, reflejando nuestros valores y tradiciones familiares.
+            Campus Radices ha sido concebido como un espacio memorial donde las familias pueden preservar la memoria de sus seres queridos con respeto, naturaleza y serenidad.
           </motion.p>
         </motion.div>
 
         {/* GRID DE ESPACIOS */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7"
           variants={stagger}
           initial="hidden"
           whileInView="show"
@@ -102,16 +66,9 @@ export default function MemorialSpaces() {
               variants={fadeUp}
               className="group bg-white border border-radices-gray rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 hover:-translate-y-1.5 overflow-hidden flex flex-col"
             >
-              {/* FOTO */}
-              <div className="relative h-44 overflow-hidden">
-                <Image
-                  src={space.imagen}
-                  alt={space.nombre}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              {/* PLACEHOLDER */}
+              <div className="bg-radices-gray h-36 rounded-xl flex items-center justify-center m-4">
+                <Leaf className="text-radices-light" size={32} />
               </div>
 
               {/* CONTENIDO */}

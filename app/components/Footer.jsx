@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 
 const navLinks = [
-  { href: '#nosotros',  label: 'Acerca de nosotros' },
-  { href: '#servicios', label: 'Servicios' },
+  { href: '#nosotros',  label: 'Nosotros' },
   { href: '#espacios',  label: 'Espacios memoriales' },
   { href: '#planes',    label: 'Planes de previsión' },
+  { href: '#servicios', label: 'Servicios complementarios' },
   { href: '#contacto',  label: 'Contacto' },
 ];
 
@@ -21,8 +21,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <p className="text-radices-light font-display text-xl font-bold mb-3">Campus Radices</p>
             <p className="text-white/60 font-body text-sm leading-relaxed">
-              Servicios funerarios integrales, dignos y planificados para las familias
-              de Esmeraldas y la región.
+              Espacio memorial para la planificación familiar en Esmeraldas, Ecuador.
             </p>
           </div>
 
@@ -45,17 +44,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* HORARIOS */}
+          {/* HORARIOS Y UBICACIÓN */}
           <div>
             <h4 className="text-sm font-semibold tracking-wider uppercase text-white/50 mb-5">
               Horarios
             </h4>
-            <div className="flex items-start gap-3 mb-4">
+            <div className="flex items-start gap-3 mb-6">
               <Clock size={16} className="text-radices-light flex-shrink-0 mt-0.5" />
               <div className="text-sm font-body text-white/65 leading-relaxed">
                 <p className="font-semibold text-white/80">Ventas</p>
                 <p>Lunes a domingo</p>
                 <p>08:00 – 18:00</p>
+              </div>
+            </div>
+            <h4 className="text-sm font-semibold tracking-wider uppercase text-white/50 mb-5">
+              Ubicación
+            </h4>
+            <div className="flex items-start gap-3">
+              <MapPin size={16} className="text-radices-light flex-shrink-0 mt-0.5" />
+              <div className="text-sm font-body text-white/65 leading-relaxed">
+                <p>Barrio Los Guayacanes, Parroquia Tachina</p>
+                <p>Cantón y Provincia Esmeraldas</p>
               </div>
             </div>
           </div>
@@ -85,10 +94,10 @@ export default function Footer() {
                   WhatsApp
                 </span>
               </a>
-              <a href="mailto:contacto@campusradices.com" className="flex items-center gap-3 group">
+              <a href="mailto:familia@campusradices.com" className="flex items-center gap-3 group">
                 <Mail size={15} className="text-radices-light flex-shrink-0" />
                 <span className="text-white/65 font-body text-sm group-hover:text-radices-light transition-colors break-all">
-                  contacto@campusradices.com
+                  familia@campusradices.com
                 </span>
               </a>
             </div>
@@ -100,7 +109,7 @@ export default function Footer() {
           <p className="text-white/40 font-body text-sm text-center">
             © 2026 Campus Radices.
             <span className="mx-2">·</span>
-            <span className="italic">La paz también se planifica.</span>
+            <span className="italic">La paz…. también se planifica.</span>
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
 
 const fadeUp = {
@@ -16,7 +16,7 @@ const stagger = {
 
 const contactInfo = [
   { icon: Phone,   titulo: 'Teléfono',   valor: '+593 96 278 8765', href: 'tel:+593962788765' },
-  { icon: Mail,    titulo: 'Email',      valor: 'contacto@campusradices.com', href: 'mailto:contacto@campusradices.com' },
+  { icon: Mail,    titulo: 'Email',      valor: 'familia@campusradices.com', href: 'mailto:familia@campusradices.com' },
   { icon: Clock,   titulo: 'Horario',    valor: 'Lunes a Domingo · 08:00 – 18:00', href: null },
   { icon: MapPin,  titulo: 'Emergencias',valor: 'Disponible 24/7', href: 'tel:+593962788765' },
 ];
@@ -25,7 +25,7 @@ const inputClass =
   'w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-radices-text font-body text-base focus:outline-none focus:border-radices-light focus:ring-2 focus:ring-radices-light/20 transition-all placeholder-gray-400';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ nombre: '', apellido: '', email: '', telefono: '', asunto: '', mensaje: '' });
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', telefono: '', mensaje: '' });
   const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
@@ -37,7 +37,7 @@ export default function ContactSection() {
     e.preventDefault();
     console.log('Formulario:', formData);
     setSent(true);
-    setFormData({ nombre: '', apellido: '', email: '', telefono: '', asunto: '', mensaje: '' });
+    setFormData({ nombre: '', apellido: '', telefono: '', mensaje: '' });
     setTimeout(() => setSent(false), 5000);
   };
 
@@ -61,14 +61,13 @@ export default function ContactSection() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Planifica con amor y responsabilidad desde hoy
+            Conversemos
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
             className="text-lg text-radices-text font-body max-w-2xl mx-auto"
           >
-            Un asesor de Campus Radices está listo para orientarte y presentarte las mejores
-            alternativas para proteger a tu familia.
+            Un asesor de Campus Radices puede orientarte para planificar hoy la tranquilidad de tu familia.
           </motion.p>
         </motion.div>
 
@@ -161,31 +160,12 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-radices-darker mb-1.5">Email *</label>
-                  <input
-                    type="email" name="email" value={formData.email}
-                    onChange={handleChange} required
-                    className={inputClass} placeholder="tu@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono</label>
-                  <input
-                    type="tel" name="telefono" value={formData.telefono}
-                    onChange={handleChange}
-                    className={inputClass} placeholder="+593 99 XXX XXXX"
-                  />
-                </div>
-              </div>
-
               <div>
-                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Asunto *</label>
+                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono</label>
                 <input
-                  type="text" name="asunto" value={formData.asunto}
-                  onChange={handleChange} required
-                  className={inputClass} placeholder="¿En qué podemos ayudarte?"
+                  type="tel" name="telefono" value={formData.telefono}
+                  onChange={handleChange}
+                  className={inputClass} placeholder="+593 99 XXX XXXX"
                 />
               </div>
 
@@ -203,8 +183,7 @@ export default function ContactSection() {
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-radices-darker text-white font-semibold rounded-xl hover:bg-radices-dark transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               >
-                <Send size={16} />
-                Enviar mensaje
+                Hablar con un asesor
               </button>
 
               <p className="text-center text-xs text-gray-400 font-body">

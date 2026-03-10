@@ -13,15 +13,15 @@ const stagger = {
 };
 
 const services = [
-  'Salas de velación',
-  'Servicio de cremación',
-  'Servicio de inhumación',
-  'Capilla',
-  'Capilla ardiente a domicilio',
-  'Tanatopraxia y preparación',
-  'Arreglos florales',
-  'Cafetería',
-  'Trámites legales',
+  'Velatio Honoris',
+  'Sepultura Pax',
+  'Ignus Eternum',
+  'Memoria Renovatio',
+  'Gestio Legatum',
+  'Arreglos Florales',
+  'Oratio Pacis',
+  'Ritus Memoriae',
+  'Flora Sancta',
 ];
 
 export default function Services() {
@@ -45,35 +45,14 @@ export default function Services() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Servicios proyectados del campus
+            Servicios exequiales complementarios
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
+            className="text-lg text-radices-text font-body max-w-3xl mx-auto"
           >
-            Campus Radices ha sido concebido como un campus funerario integral que contemplará
-            distintos espacios y servicios diseñados para acompañar a las familias en cada etapa
-            del proceso de despedida.
+            El campus contemplará servicios adicionales destinados a acompañar a las familias cuando así lo requieran.
           </motion.p>
-          <motion.p variants={fadeUp}
-            className="text-base text-radices-text/80 font-body max-w-2xl mx-auto"
-          >
-            Entre los servicios proyectados dentro del desarrollo del campus se contemplan:
-          </motion.p>
-        </motion.div>
-
-        {/* AVISO */}
-        <motion.div
-          className="mb-10 bg-radices-darker/5 border border-radices-darker/15 rounded-xl px-6 py-4 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-sm text-radices-darker/70 font-body italic">
-            Campus Radices es un proyecto en desarrollo cuya infraestructura será implementada
-            progresivamente conforme a su plan maestro.
-          </p>
         </motion.div>
 
         {/* LISTA */}

@@ -14,7 +14,7 @@ const stagger = {
 
 export default function MissionVision() {
   return (
-    <section className="py-24 px-4 bg-radices-gray">
+    <section id="nosotros" className="py-24 px-4 bg-radices-gray">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -49,14 +49,8 @@ export default function MissionVision() {
           >
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
             <h3 className="text-3xl font-display mb-6">Nuestra misión</h3>
-            <p className="font-body text-lg leading-relaxed text-white/85 mb-5">
-              Brindar a las familias de Esmeraldas y la región una solución funeraria integral,
-              digna y planificada, que permita afrontar los procesos de despedida con serenidad,
-              organización y respeto, evitando decisiones apresuradas o cargas económicas inesperadas.
-            </p>
-            <p className="font-body leading-relaxed text-white/70">
-              Promovemos la planificación funeraria como una forma consciente de proteger
-              a la familia y preservar su tranquilidad.
+            <p className="font-body text-lg leading-relaxed text-white/85">
+              Brindar a las familias de Esmeraldas en Ecuador, un espacio memorial digno y organizado, promoviendo la planificación anticipada como una forma responsable de proteger a quienes amamos y preservar la memoria con respeto.
             </p>
           </motion.div>
 
@@ -71,15 +65,8 @@ export default function MissionVision() {
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
             <h3 className="text-3xl font-display mb-6">Nuestra visión</h3>
             <p className="font-body text-lg leading-relaxed text-white/85">
-              Consolidar a Campus Radices como el campus funerario de referencia en la
-              provincia de Esmeraldas, reconocido por su enfoque humano, su visión innovadora
-              en planificación funeraria y su contribución al bienestar de las familias.
+              Convertirnos en el principal campus memorial de la región, reconocido por su enfoque humano, su compromiso con la planificación familiar y su modelo innovador de previsión patrimonial.
             </p>
-            <div className="mt-10 pt-8 border-t border-white/20">
-              <p className="font-display text-2xl italic text-radices-light">
-                "La paz también se planifica."
-              </p>
-            </div>
           </motion.div>
 
         </div>
