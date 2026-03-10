@@ -77,7 +77,7 @@ export default function MemorialSpaces() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Espacios Memoriales
+            Espacios memoriales
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
@@ -127,7 +127,7 @@ export default function MemorialSpaces() {
                     href="#contacto"
                     className="text-xs font-semibold text-radices-light hover:text-radices-dark transition-colors inline-flex items-center gap-1"
                   >
-                    Ver detalles
+                    Más información
                     <span className="text-base leading-none">→</span>
                   </a>
                 </div>

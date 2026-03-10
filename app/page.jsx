@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle2 } from 'lucide-react';
-import Logo from '@/app/components/Logo';
 import HowWeSupport    from '@/app/components/HowWeSupport';
 import Services        from '@/app/components/Services';
 import MemorialSpaces  from '@/app/components/MemorialSpaces';
@@ -57,10 +56,6 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.div variants={stagger} initial="hidden" animate="show">
-
-            <motion.div variants={fadeUp} className="flex justify-center mb-8">
-              <Logo size={150} />
-            </motion.div>
 
             <motion.p variants={fadeUp}
               className="text-radices-light text-xs font-semibold tracking-[0.3em] uppercase mb-8"
@@ -136,7 +131,7 @@ export default function Home() {
             <motion.h2 variants={fadeUp}
               className="text-4xl md:text-5xl font-display text-radices-darker mb-6 leading-tight"
             >
-              Acerca de Nosotros
+              Acerca de nosotros
             </motion.h2>
             <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto mb-8 rounded-full" />
             <motion.p variants={fadeUp}
@@ -258,11 +253,11 @@ export default function Home() {
       {/* ═══ CÓMO ACOMPAÑAMOS ════════════════════════════════════════════════ */}
       <HowWeSupport />
 
-      {/* ═══ SERVICIOS ═══════════════════════════════════════════════════════ */}
-      <Services />
-
       {/* ═══ ESPACIOS MEMORIALES ═════════════════════════════════════════════ */}
       <MemorialSpaces />
+
+      {/* ═══ SERVICIOS ═══════════════════════════════════════════════════════ */}
+      <Services />
 
       {/* ═══ PLANES DE PREVISIÓN ═════════════════════════════════════════════ */}
       <PreventivePlans />

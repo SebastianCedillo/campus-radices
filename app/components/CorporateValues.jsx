@@ -10,26 +10,26 @@ const fadeUp = {
 
 const stagger = {
   hidden: {},
-  show:   { transition: { staggerChildren: 0.1 } },
+  show:   { transition: { staggerChildren: 0.08 } },
 };
 
 const values = [
-  { icon: Heart,     nombre: 'Dignidad Humana',           descripcion: 'Cada vida merece ser honrada con respeto absoluto y cuidado integral.' },
-  { icon: Users,     nombre: 'Amor y Unión Familiar',     descripcion: 'Fomentamos la unión y el fortalecimiento de los lazos familiares en momentos difíciles.' },
-  { icon: Handshake, nombre: 'Respeto y Sensibilidad',    descripcion: 'Entendemos el dolor y actuamos con empatía y consideración en cada interacción.' },
-  { icon: Lightbulb, nombre: 'Transparencia',             descripcion: 'Comunicación clara y honesta en todos nuestros procesos y servicios.' },
-  { icon: Clock,     nombre: 'Planificación y Previsión', descripcion: 'Promovemos la planificación anticipada como acto de amor hacia quienes amamos.' },
-  { icon: Shield,    nombre: 'Confianza y Acompañamiento',descripcion: 'Somos tu apoyo constante en cada etapa del proceso de despedida.' },
-  { icon: Leaf,      nombre: 'Responsabilidad Social',    descripcion: 'Comprometidos con el bienestar colectivo y la sostenibilidad ambiental.' },
+  { icon: Heart,     nombre: 'Dignidad humana' },
+  { icon: Users,     nombre: 'Amor y unión familiar' },
+  { icon: Handshake, nombre: 'Respeto y sensibilidad' },
+  { icon: Lightbulb, nombre: 'Transparencia' },
+  { icon: Clock,     nombre: 'Planificación y previsión' },
+  { icon: Shield,    nombre: 'Confianza y acompañamiento' },
+  { icon: Leaf,      nombre: 'Responsabilidad social' },
 ];
 
 export default function CorporateValues() {
   return (
     <section className="py-24 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-14"
           variants={stagger}
           initial="hidden"
           whileInView="show"
@@ -43,18 +43,13 @@ export default function CorporateValues() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Valores que guían nuestro proyecto
+            Valores que guían nuestro camino
           </motion.h2>
-          <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
-          <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-2xl mx-auto"
-          >
-            Los principios que guían cada decisión y acción en Campus Radices.
-          </motion.p>
+          <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full" />
         </motion.div>
 
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="flex flex-wrap justify-center gap-5"
           variants={stagger}
           initial="hidden"
           whileInView="show"
@@ -64,16 +59,13 @@ export default function CorporateValues() {
             <motion.div
               key={idx}
               variants={fadeUp}
-              className="group bg-radices-cream rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="flex flex-col items-center gap-3 w-32"
             >
-              <div className="w-12 h-12 bg-radices-light/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-radices-light/25 transition-colors">
+              <div className="w-14 h-14 bg-radices-light/15 rounded-full flex items-center justify-center hover:bg-radices-light/30 transition-colors">
                 <value.icon className="w-6 h-6 text-radices-light" />
               </div>
-              <h3 className="text-lg font-display text-radices-darker mb-3 leading-snug">
+              <p className="text-sm font-display text-radices-darker text-center leading-snug">
                 {value.nombre}
-              </h3>
-              <p className="text-sm text-radices-text font-body leading-relaxed flex-1">
-                {value.descripcion}
               </p>
             </motion.div>
           ))}

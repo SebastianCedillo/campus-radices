@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'radices-darker': '#1e3d0f',
-        'radices-dark':   '#4a7d3e',
-        'radices-mid':    '#5a8e2a',
-        'radices-light':  '#8cc543',
+        'radices-darker': '#2c1f14',
+        'radices-dark':   '#6b4c30',
+        'radices-mid':    '#a07850',
+        'radices-light':  '#c8a97a',
         'radices-brown':  '#8b6535',
-        'radices-gray':   '#f5f5f0',
-        'radices-cream':  '#faf9f5',
-        'radices-text':   '#333333',
+        'radices-gray':   '#f5efe8',
+        'radices-cream':  '#faf6f0',
+        'radices-text':   '#3d2b1f',
       },
       fontFamily: {
         'display': ['Lora', 'serif'],

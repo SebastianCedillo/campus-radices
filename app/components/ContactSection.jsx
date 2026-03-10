@@ -25,7 +25,7 @@ const inputClass =
   'w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-radices-text font-body text-base focus:outline-none focus:border-radices-light focus:ring-2 focus:ring-radices-light/20 transition-all placeholder-gray-400';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ nombre: '', email: '', telefono: '', asunto: '', mensaje: '' });
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', email: '', telefono: '', asunto: '', mensaje: '' });
   const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
@@ -37,7 +37,7 @@ export default function ContactSection() {
     e.preventDefault();
     console.log('Formulario:', formData);
     setSent(true);
-    setFormData({ nombre: '', email: '', telefono: '', asunto: '', mensaje: '' });
+    setFormData({ nombre: '', apellido: '', email: '', telefono: '', asunto: '', mensaje: '' });
     setTimeout(() => setSent(false), 5000);
   };
 
@@ -84,7 +84,7 @@ export default function ContactSection() {
             <motion.h3 variants={fadeUp}
               className="text-2xl font-display text-radices-darker mb-8"
             >
-              Información de Contacto
+              Información de contacto
             </motion.h3>
 
             <motion.div variants={stagger} className="space-y-5 mb-10">
@@ -174,7 +174,7 @@ export default function ContactSection() {
             className="bg-radices-cream rounded-2xl p-8 shadow-card"
           >
             <h3 className="text-2xl font-display text-radices-darker mb-6">
-              Envía tu Mensaje
+              Envía tu mensaje
             </h3>
 
             {sent && (
@@ -190,9 +190,19 @@ export default function ContactSection() {
                   <input
                     type="text" name="nombre" value={formData.nombre}
                     onChange={handleChange} required
-                    className={inputClass} placeholder="Tu nombre completo"
+                    className={inputClass} placeholder="Tu nombre"
                   />
                 </div>
+                <div>
+                  <label className="block text-sm font-semibold text-radices-darker mb-1.5">Apellido *</label>
+                  <input
+                    type="text" name="apellido" value={formData.apellido}
+                    onChange={handleChange} required
+                    className={inputClass} placeholder="Tu apellido"
+                  />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-radices-darker mb-1.5">Email *</label>
                   <input
@@ -201,15 +211,14 @@ export default function ContactSection() {
                     className={inputClass} placeholder="tu@email.com"
                   />
                 </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono</label>
-                <input
-                  type="tel" name="telefono" value={formData.telefono}
-                  onChange={handleChange}
-                  className={inputClass} placeholder="+593 99 XXX XXXX"
-                />
+                <div>
+                  <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono</label>
+                  <input
+                    type="tel" name="telefono" value={formData.telefono}
+                    onChange={handleChange}
+                    className={inputClass} placeholder="+593 99 XXX XXXX"
+                  />
+                </div>
               </div>
 
               <div>

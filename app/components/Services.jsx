@@ -1,83 +1,37 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 40 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
 const stagger = {
   hidden: {},
-  show:   { transition: { staggerChildren: 0.08 } },
+  show:   { transition: { staggerChildren: 0.07 } },
 };
 
 const services = [
-  {
-    imagen: '/images/servicios/salas-velacion.jpg',
-    nombre: 'Salas de Velación',
-    descripcion:
-      'Espacios diseñados para brindar un ambiente familiar y acogedor donde las familias puedan compartir el recuerdo y el amor en la despedida.',
-  },
-  {
-    imagen: '/images/servicios/cremacion.jpg',
-    nombre: 'Servicio de Cremación',
-    descripcion:
-      'El proyecto contempla servicios de cremación que permitirán a las familias honrar a su ser querido en un acto íntimo y digno.',
-  },
-  {
-    imagen: '/images/servicios/inhumacion.jpg',
-    nombre: 'Servicio de Inhumación',
-    descripcion:
-      'El campus contemplará diferentes alternativas para la disposición final: bóvedas, nichos, osarios, cenizarios y mausoleos familiares.',
-  },
-  {
-    imagen: '/images/servicios/capilla.jpg',
-    nombre: 'Capilla',
-    descripcion:
-      'Dentro del desarrollo del campus se proyecta la construcción de una capilla destinada a ceremonias religiosas y actos de despedida en un entorno de recogimiento y respeto.',
-  },
-  {
-    imagen: '/images/servicios/capilla-domicilio.jpg',
-    nombre: 'Capilla Ardiente a Domicilio',
-    descripcion:
-      'Como parte del acompañamiento a las familias, se contemplan servicios de velación domiciliaria cuando así lo requieran.',
-  },
-  {
-    imagen: '/images/servicios/tanatopraxia.jpg',
-    nombre: 'Tanatopraxia y Preparación',
-    descripcion:
-      'Se contemplan procesos profesionales de preparación y preservación del cuerpo bajo protocolos de respeto y cuidado.',
-  },
-  {
-    imagen: '/images/servicios/arreglos-florales.jpg',
-    nombre: 'Arreglos Florales',
-    descripcion:
-      'Servicios florales que permitirán a las familias expresar el homenaje y el amor hacia su ser querido.',
-  },
-  {
-    imagen: '/images/servicios/cafeteria.jpg',
-    nombre: 'Cafetería',
-    descripcion:
-      'El campus contemplará espacios destinados a servicios de cafetería para acompañar a las familias durante las velaciones.',
-  },
-  {
-    imagen: '/images/servicios/tramites-legales.jpg',
-    nombre: 'Trámites Legales',
-    descripcion:
-      'Se brindará orientación en trámites relacionados con certificado médico de defunción, inscripción en Registro Civil, permisos de cremación, reclamo de montepío, orientación sobre herencias y otros procesos necesarios.',
-  },
+  'Salas de velación',
+  'Servicio de cremación',
+  'Servicio de inhumación',
+  'Capilla',
+  'Capilla ardiente a domicilio',
+  'Tanatopraxia y preparación',
+  'Arreglos florales',
+  'Cafetería',
+  'Trámites legales',
 ];
 
 export default function Services() {
   return (
     <section id="servicios" className="py-24 px-4 bg-radices-gray">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         {/* ENCABEZADO */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-14"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
@@ -91,11 +45,11 @@ export default function Services() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Servicios proyectados del Campus
+            Servicios proyectados del campus
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full mb-6" />
           <motion.p variants={fadeUp}
-            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-4"
+            className="text-lg text-radices-text font-body max-w-3xl mx-auto mb-3"
           >
             Campus Radices ha sido concebido como un campus funerario integral que contemplará
             distintos espacios y servicios diseñados para acompañar a las familias en cada etapa
@@ -108,7 +62,7 @@ export default function Services() {
           </motion.p>
         </motion.div>
 
-        {/* AVISO PROYECTO EN DESARROLLO */}
+        {/* AVISO */}
         <motion.div
           className="mb-10 bg-radices-darker/5 border border-radices-darker/15 rounded-xl px-6 py-4 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -122,52 +76,28 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* GRID DE SERVICIOS */}
+        {/* LISTA */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.05 }}
         >
           {services.map((service, idx) => (
-            <motion.article
+            <motion.div
               key={idx}
               variants={fadeUp}
-              className="group bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 hover:-translate-y-1.5 overflow-hidden flex flex-col"
+              className="bg-white rounded-xl shadow-card px-6 py-5 flex items-center justify-between group hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5"
             >
-              {/* FOTO */}
-              <div className="relative h-52 overflow-hidden">
-                <Image
-                  src={service.imagen}
-                  alt={service.nombre}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                {/* Overlay sutil para legibilidad */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-
-              {/* CONTENIDO */}
-              <div className="p-7 flex flex-col flex-1">
-                <h3 className="text-xl font-display text-radices-darker mb-3 leading-snug">
-                  {service.nombre}
-                </h3>
-                <p className="text-radices-text font-body leading-relaxed text-base flex-1">
-                  {service.descripcion}
-                </p>
-                <div className="mt-6 pt-5 border-t border-radices-gray">
-                  <a
-                    href="#contacto"
-                    className="text-sm font-semibold text-radices-light hover:text-radices-dark transition-colors inline-flex items-center gap-1.5"
-                  >
-                    Solicitar información
-                    <span className="text-lg leading-none">→</span>
-                  </a>
-                </div>
-              </div>
-            </motion.article>
+              <span className="font-display text-radices-darker text-base">{service}</span>
+              <a
+                href="#contacto"
+                className="text-xs font-semibold text-radices-light hover:text-radices-dark transition-colors whitespace-nowrap ml-4"
+              >
+                Solicitar información →
+              </a>
+            </motion.div>
           ))}
         </motion.div>
 

@@ -2,36 +2,31 @@
 
 import Link from 'next/link';
 import { Phone, Mail, Clock } from 'lucide-react';
-import Logo from './Logo';
 
 const navLinks = [
-  { href: '#nosotros',  label: 'Acerca de Nosotros' },
+  { href: '#nosotros',  label: 'Acerca de nosotros' },
   { href: '#servicios', label: 'Servicios' },
-  { href: '#espacios',  label: 'Espacios Memoriales' },
-  { href: '#planes',    label: 'Planes de Previsión' },
+  { href: '#espacios',  label: 'Espacios memoriales' },
+  { href: '#planes',    label: 'Planes de previsión' },
   { href: '#contacto',  label: 'Contacto' },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-radices-darker text-white">
-
-      {/* CUERPO PRINCIPAL */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid md:grid-cols-4 gap-10 mb-12">
 
           {/* MARCA */}
           <div className="md:col-span-1">
-            <div className="mb-5">
-              <Logo size={80} />
-            </div>
+            <p className="text-radices-light font-display text-xl font-bold mb-3">Campus Radices</p>
             <p className="text-white/60 font-body text-sm leading-relaxed">
               Servicios funerarios integrales, dignos y planificados para las familias
               de Esmeraldas y la región.
             </p>
           </div>
 
-          {/* ENLACES RÁPIDOS */}
+          {/* NAVEGACIÓN */}
           <div>
             <h4 className="text-sm font-semibold tracking-wider uppercase text-white/50 mb-5">
               Navegación
@@ -59,7 +54,7 @@ export default function Footer() {
               <Clock size={16} className="text-radices-light flex-shrink-0 mt-0.5" />
               <div className="text-sm font-body text-white/65 leading-relaxed">
                 <p className="font-semibold text-white/80">Ventas</p>
-                <p>Lunes a Domingo</p>
+                <p>Lunes a domingo</p>
                 <p>08:00 – 18:00</p>
               </div>
             </div>
@@ -78,10 +73,7 @@ export default function Footer() {
               Contacto
             </h4>
             <div className="space-y-3">
-              <a
-                href="tel:+593962788765"
-                className="flex items-center gap-3 group"
-              >
+              <a href="tel:+593962788765" className="flex items-center gap-3 group">
                 <Phone size={15} className="text-radices-light flex-shrink-0" />
                 <span className="text-white/65 font-body text-sm group-hover:text-radices-light transition-colors">
                   +593 96 278 8765
@@ -100,13 +92,10 @@ export default function Footer() {
                   WhatsApp
                 </span>
               </a>
-              <a
-                href="mailto:ventas@campusradices.com"
-                className="flex items-center gap-3 group"
-              >
+              <a href="mailto:contacto@campusradices.com" className="flex items-center gap-3 group">
                 <Mail size={15} className="text-radices-light flex-shrink-0" />
                 <span className="text-white/65 font-body text-sm group-hover:text-radices-light transition-colors break-all">
-                  ventas@campusradices.com
+                  contacto@campusradices.com
                 </span>
               </a>
             </div>
@@ -116,8 +105,6 @@ export default function Footer() {
         {/* DIVISOR */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-
-            {/* Redes */}
             <div className="flex items-center gap-3">
               <a
                 href="https://www.instagram.com/campusradices/"
@@ -132,31 +119,7 @@ export default function Footer() {
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" strokeWidth="0" />
                 </svg>
               </a>
-              <a
-                href="https://www.instagram.com/campusradices/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="w-9 h-9 bg-white/8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-radices-light transition-all duration-300"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/campusradices/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="w-9 h-9 bg-white/8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-radices-light transition-all duration-300"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.8 1.52V6.75a4.85 4.85 0 01-1.03-.06z" />
-                </svg>
-              </a>
             </div>
-
-            {/* Copyright */}
             <p className="text-white/40 font-body text-sm text-center">
               © 2026 Campus Radices.
               <span className="mx-2">·</span>

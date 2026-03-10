@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 
 const navLinks = [
@@ -35,19 +34,16 @@ export default function Header() {
 
   return (
     <>
-      {/* NAVBAR — altura fija, nada dentro puede cambiarla */}
       <header
         className="fixed top-0 left-0 right-0 z-50 bg-radices-darker w-full shadow-lg transition-transform duration-300"
         style={{ height: '96px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
 
-          {/* LOGO */}
           <Link href="/" className="hover:opacity-90 transition-opacity">
             <Logo size={84} />
           </Link>
 
-          {/* NAV DESKTOP */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
               <Link
@@ -60,20 +56,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA DESKTOP */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="https://wa.me/593962788765"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-all duration-300 hover:shadow-lg hover:shadow-radices-light/30"
-            >
-              <MessageCircle size={14} />
-              Emergencia 24/7
-            </a>
-          </div>
-
-          {/* HAMBURGUESA MOBILE */}
           <button
             className="md:hidden p-2 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -89,7 +71,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MENÚ MOBILE — elemento separado, fijo debajo del navbar */}
       <div
         className={`md:hidden fixed left-0 right-0 z-40 bg-radices-darker overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
         style={{ top: '96px', transform: hidden ? 'translateY(-100%)' : 'translateY(0)', visibility: hidden ? 'hidden' : 'visible' }}
@@ -105,17 +86,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="px-4 pt-3">
-            <a
-              href="https://wa.me/593962788765"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-5 py-2.5 bg-radices-light text-white font-semibold text-sm rounded-full hover:bg-radices-mid transition-colors"
-            >
-              <MessageCircle size={14} />
-              Emergencia 24/7
-            </a>
-          </div>
         </div>
       </div>
     </>

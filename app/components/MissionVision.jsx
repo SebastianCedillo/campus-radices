@@ -32,7 +32,7 @@ export default function MissionVision() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            Misión y Visión
+            Misión y visión
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full" />
         </motion.div>
@@ -48,7 +48,7 @@ export default function MissionVision() {
             className="bg-radices-darker rounded-2xl p-10 text-white shadow-card-lg"
           >
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
-            <h3 className="text-3xl font-display mb-6">Nuestra Misión</h3>
+            <h3 className="text-3xl font-display mb-6">Nuestra misión</h3>
             <p className="font-body text-lg leading-relaxed text-white/85 mb-5">
               Brindar a las familias de Esmeraldas y la región una solución funeraria integral,
               digna y planificada, que permita afrontar los procesos de despedida con serenidad,
@@ -69,7 +69,7 @@ export default function MissionVision() {
             className="bg-radices-dark rounded-2xl p-10 text-white shadow-card-lg"
           >
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
-            <h3 className="text-3xl font-display mb-6">Nuestra Visión</h3>
+            <h3 className="text-3xl font-display mb-6">Nuestra visión</h3>
             <p className="font-body text-lg leading-relaxed text-white/85">
               Consolidar a Campus Radices como el campus funerario de referencia en la
               provincia de Esmeraldas, reconocido por su enfoque humano, su visión innovadora
