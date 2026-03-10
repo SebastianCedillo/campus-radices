@@ -82,7 +82,7 @@ export default function Home() {
               momentos de despedida con serenidad.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start">
+            <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center lg:items-start">
               <a
                 href="#planes"
                 className="px-8 py-4 bg-radices-darker text-white font-semibold rounded-full hover:bg-radices-dark transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
