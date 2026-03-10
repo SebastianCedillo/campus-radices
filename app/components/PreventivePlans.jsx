@@ -131,7 +131,7 @@ export default function PreventivePlans() {
                 className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-mid transition-all duration-300 hover:shadow-lg hover:shadow-radices-light/30"
               >
                 <PhoneCall size={18} />
-                Contactar Asesor Especializado
+                Contactar asesor especializado
               </a>
               <p className="text-center text-xs text-white/45 font-body">
                 Consulta inicial sin costo · Atención personalizada

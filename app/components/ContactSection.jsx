@@ -122,47 +122,6 @@ export default function ContactSection() {
               </a>
             </motion.div>
 
-            {/* Redes sociales */}
-            <motion.div variants={fadeUp}>
-              <p className="text-sm font-semibold text-radices-darker mb-4">Síguenos en redes</p>
-              <div className="flex gap-3">
-                <a
-                  href="https://www.instagram.com/campusradices/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"
-                  aria-label="Instagram"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
-                    <rect x="2" y="2" width="20" height="20" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" strokeWidth="0" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.instagram.com/campusradices/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"
-                  aria-label="Facebook"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.instagram.com/campusradices/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-11 h-11 bg-radices-gray rounded-xl flex items-center justify-center text-radices-text hover:bg-radices-darker hover:text-white transition-all duration-300"
-                  aria-label="TikTok"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.8 1.52V6.75a4.85 4.85 0 01-1.03-.06z" />
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* FORMULARIO */}
@@ -245,7 +204,7 @@ export default function ContactSection() {
                 className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-radices-darker text-white font-semibold rounded-xl hover:bg-radices-dark transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               >
                 <Send size={16} />
-                Enviar Mensaje
+                Enviar mensaje
               </button>
 
               <p className="text-center text-xs text-gray-400 font-body">

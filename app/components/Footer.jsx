@@ -58,13 +58,6 @@ export default function Footer() {
                 <p>08:00 – 18:00</p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <Phone size={16} className="text-radices-light flex-shrink-0 mt-0.5" />
-              <div className="text-sm font-body text-white/65">
-                <p className="font-semibold text-white/80">Emergencias</p>
-                <p>Disponible 24/7</p>
-              </div>
-            </div>
           </div>
 
           {/* CONTACTO */}
@@ -104,28 +97,11 @@ export default function Footer() {
 
         {/* DIVISOR */}
         <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.instagram.com/campusradices/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-9 h-9 bg-white/8 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-radices-light transition-all duration-300"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" strokeWidth="0" />
-                </svg>
-              </a>
-            </div>
-            <p className="text-white/40 font-body text-sm text-center">
-              © 2026 Campus Radices.
-              <span className="mx-2">·</span>
-              <span className="italic">La paz también se planifica.</span>
-            </p>
-          </div>
+          <p className="text-white/40 font-body text-sm text-center">
+            © 2026 Campus Radices.
+            <span className="mx-2">·</span>
+            <span className="italic">La paz también se planifica.</span>
+          </p>
         </div>
       </div>
     </footer>

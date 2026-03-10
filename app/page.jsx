@@ -37,75 +37,94 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Campus Radices"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-radices-darker/80" />
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-radices-cream">
 
-        {/* Decorative rings */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full border border-white/5" />
-          <div className="absolute -top-16 -right-16 w-[350px] h-[350px] rounded-full border border-white/5" />
-          <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] rounded-full border border-white/5" />
-        </div>
+        {/* Textura sutil de fondo */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#e8ddd0_0%,_transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_#d4c4b0_0%,_transparent_50%)] pointer-events-none" />
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <motion.div variants={stagger} initial="hidden" animate="show">
+        {/* DOS COLUMNAS */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 py-28 flex flex-col lg:flex-row items-center gap-12">
 
+          {/* TEXTO — izquierda */}
+          <motion.div
+            className="w-full lg:w-[40%] shrink-0 text-center lg:text-left"
+            variants={stagger} initial="hidden" animate="show"
+          >
             <motion.p variants={fadeUp}
-              className="text-radices-light text-xs font-semibold tracking-[0.3em] uppercase mb-8"
+              className="text-radices-light text-xs font-semibold tracking-[0.3em] uppercase mb-6"
             >
               Esmeraldas, Ecuador
             </motion.p>
 
             <motion.h1 variants={fadeUp}
-              className="text-5xl sm:text-6xl md:text-7xl font-display text-white leading-tight mb-6"
+              className="text-5xl sm:text-6xl md:text-7xl font-display text-radices-darker leading-tight mb-6"
             >
               La Paz También
               <br />
-              <span className="text-radices-light">Se Planifica.</span>
+              <span className="text-radices-dark">se planifica.</span>
             </motion.h1>
 
-            <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-16 bg-white/30" />
+            <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-4 mb-8">
+              <div className="h-px w-16 bg-radices-light/50" />
               <div className="w-1.5 h-1.5 rounded-full bg-radices-light" />
-              <div className="h-px w-16 bg-white/30" />
+              <div className="h-px w-16 bg-radices-light/50" />
             </motion.div>
 
             <motion.p variants={fadeUp}
-              className="text-lg md:text-xl text-white/80 font-body leading-relaxed max-w-2xl mx-auto mb-10"
+              className="text-lg text-radices-text/80 font-body leading-relaxed mb-10"
             >
               Campus Radices es un espacio digno, organizado y verdaderamente humano,
               donde la memoria es honrada con respeto y la previsión permite vivir los
               momentos de despedida con serenidad.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#planes"
-                className="px-8 py-4 bg-radices-light text-white font-semibold rounded-full hover:bg-radices-mid transition-all duration-300 hover:shadow-xl hover:shadow-radices-light/30 hover:-translate-y-0.5"
+                className="px-8 py-4 bg-radices-darker text-white font-semibold rounded-full hover:bg-radices-dark transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
               >
-                Planificar Ahora
+                Planificar ahora
               </a>
               <a
                 href="#contacto"
-                className="px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:border-white hover:bg-white/10 transition-all duration-300"
+                className="px-8 py-4 border-2 border-radices-darker/30 text-radices-darker font-semibold rounded-full hover:border-radices-darker hover:bg-radices-darker/5 transition-all duration-300"
               >
-                Hablar con un Asesor
+                Hablar con un asesor
               </a>
             </motion.div>
-
           </motion.div>
+
+          {/* PLANO — derecha, completo y rotado */}
+          <motion.div
+            className="hidden lg:flex flex-1 items-center justify-center"
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
+          >
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 5 }}
+              transition={{ duration: 1.1, ease: 'easeOut', delay: 0.4 }}
+              className="relative"
+              style={{ filter: 'drop-shadow(0 25px 50px rgba(44,31,20,0.18))' }}
+            >
+              <Image
+                src="/images/plano-hd.png"
+                alt="Plano maestro Campus Radices"
+                width={720}
+                height={560}
+                className="w-full max-w-[720px] rounded-lg"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+
         </div>
 
         <motion.a
           href="#nosotros"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-radices-darker/40 hover:text-radices-darker transition-colors"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.6, duration: 0.8 }}
