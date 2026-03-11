@@ -30,8 +30,16 @@ export default function BrandMessage() {
             <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
               La planificación memorial permite tomar decisiones con serenidad, proteger a la familia de cargas inesperadas y preservar la memoria con respeto.
             </motion.p>
-            <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed">
+            <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
               Campus Radices nace con un propósito claro: ofrecer a las familias un espacio digno donde la memoria, la tranquilidad y la previsión puedan organizarse con tiempo.
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
+              Creemos firmemente que la paz familiar no debe improvisarse.
+            </motion.p>
+            <motion.p variants={fadeUp}
+              className="text-xl font-display italic text-radices-dark border-l-4 border-radices-light pl-4"
+            >
+              Por eso nace nuestro principio fundamental: La paz también se planifica.
             </motion.p>
           </motion.div>
           {/* RIGHT: imagen familiar */}

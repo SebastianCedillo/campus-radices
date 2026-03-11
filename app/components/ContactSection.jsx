@@ -193,6 +193,30 @@ export default function ContactSection() {
           </motion.div>
 
         </div>
+
+        {/* MAPA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl font-display text-radices-darker mb-6">Nuestra ubicación</h3>
+          <div className="rounded-2xl overflow-hidden shadow-card-lg h-80 md:h-[420px]">
+            <iframe
+              src="https://maps.google.com/maps?q=0.983897,-79.622559&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación Campus Radices"
+            />
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

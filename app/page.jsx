@@ -11,6 +11,9 @@ import MemorialSpaces from '@/app/components/MemorialSpaces';
 import Services       from '@/app/components/Services';
 import PreventivePlans from '@/app/components/PreventivePlans';
 import EmotionalSection from '@/app/components/EmotionalSection';
+import TrustSection  from '@/app/components/TrustSection';
+import HowWeSupport   from '@/app/components/HowWeSupport';
+import FAQ            from '@/app/components/FAQ';
 import ContactSection from '@/app/components/ContactSection';
 import WhatsAppFloat  from '@/app/components/WhatsAppFloat';
 
@@ -30,6 +33,7 @@ const whyPlanItems = [
   'Proteger la unión familiar',
   'Garantizar una despedida digna',
   'Asegurar espacios dentro del campus',
+  'Preservar la memoria con respeto',
 ];
 
 export default function Home() {
@@ -43,6 +47,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(198,164,122,0.1)_0%,_transparent_60%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(166,124,82,0.05)_0%,_transparent_50%)] pointer-events-none" />
 
+        {/* Marca de agua: paisaje */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
+          <Image
+            src="/images/hero-bg.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
+
         {/* Contenido centrado */}
         <motion.div
           className="relative z-10 text-center max-w-3xl mx-auto px-6 py-20"
@@ -51,9 +67,16 @@ export default function Home() {
           animate="show"
         >
           {/* Logo centrado */}
-          <motion.div variants={fadeUp} className="flex justify-center mb-8">
+          <motion.div variants={fadeUp} className="flex justify-center mb-6">
             <Logo size={120} />
           </motion.div>
+
+          <motion.p
+            variants={fadeUp}
+            className="text-sm font-semibold tracking-[0.3em] uppercase text-radices-light mb-8"
+          >
+            Campus Radices
+          </motion.p>
 
           <motion.h1
             variants={fadeUp}
@@ -72,17 +95,23 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-lg text-radices-text/80 font-body leading-relaxed mb-10"
+            className="text-lg text-radices-text/80 font-body leading-relaxed mb-2"
           >
             Planificar hoy es un acto de amor que protege a tu familia y preserva la memoria con dignidad.
+          </motion.p>
+          <motion.p
+            variants={fadeUp}
+            className="text-base text-radices-text/60 font-body leading-relaxed mb-10"
+          >
+            Un espacio memorial pensado para las familias de Esmeraldas.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center">
             <a
-              href="#contacto"
+              href="#planes"
               className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
             >
-              Conocer el proyecto
+              Conocer cómo planificar
             </a>
             <a
               href="https://wa.me/593962788765"
@@ -90,7 +119,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="px-8 py-4 border-2 border-radices-mid text-radices-mid font-semibold rounded-full hover:bg-radices-mid/5 transition-all duration-300"
             >
-              Escribir por WhatsApp
+              Hablar con un asesor
             </a>
           </motion.div>
         </motion.div>
@@ -156,7 +185,10 @@ export default function Home() {
               >
                 ¿Por qué planificar con anticipación?
               </motion.h2>
-              <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-8 rounded-full" />
+              <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-6 rounded-full" />
+              <motion.p variants={fadeUp} className="text-radices-text font-body text-base leading-relaxed mb-6">
+                La planificación anticipada permite a las familias tomar decisiones importantes con tranquilidad y organización. Entre sus principales beneficios se encuentran:
+              </motion.p>
               <motion.ul variants={stagger} className="space-y-4 mb-8">
                 {whyPlanItems.map((item, i) => (
                   <motion.li key={i} variants={fadeUp} className="flex items-start gap-3">
@@ -168,13 +200,16 @@ export default function Home() {
               <motion.p variants={fadeUp}
                 className="text-lg font-display italic text-radices-dark border-l-4 border-radices-light pl-4"
               >
-                "La previsión es una forma de cuidar a quienes amas."
+                "La previsión es una forma responsable de cuidar a quienes amas."
               </motion.p>
             </motion.div>
 
           </div>
         </div>
       </section>
+
+      {/* ═══ CONFIANZA Y RESPALDO ════════════════════════════════════════════ */}
+      <TrustSection />
 
       {/* ═══ ESPACIOS MEMORIALES ═════════════════════════════════════════════ */}
       <MemorialSpaces />
@@ -185,8 +220,14 @@ export default function Home() {
       {/* ═══ PLANES DE PREVISIÓN ═════════════════════════════════════════════ */}
       <PreventivePlans />
 
+      {/* ═══ PREGUNTAS FRECUENTES ════════════════════════════════════════════ */}
+      <FAQ />
+
       {/* ═══ EMOTIONAL SECTION ═══════════════════════════════════════════════ */}
       <EmotionalSection />
+
+      {/* ═══ CÓMO ACOMPAÑAMOS ════════════════════════════════════════════════ */}
+      <HowWeSupport />
 
       {/* ═══ CONTACTO ════════════════════════════════════════════════════════ */}
       <ContactSection />

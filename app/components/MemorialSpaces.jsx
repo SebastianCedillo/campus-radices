@@ -1,7 +1,7 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Leaf } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -14,11 +14,11 @@ const stagger = {
 };
 
 const spaces = [
-  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales.' },
-  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Cenizarios para resguardo de urnas.' },
-  { nombre: 'Osarios Radices Altum',     descripcion: 'Osarios memoriales.' },
-  { nombre: 'Panteón Familiar Radices',  descripcion: 'Panteones familiares.' },
-  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Mausoleos familiares.' },
+  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales diseñadas para preservar la memoria con dignidad y orden.',                                              img: '/images/espacios/boveda.png' },
+  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Espacios destinados al resguardo de urnas funerarias en un entorno natural y sereno.',                                     img: '/images/espacios/cenizario.png' },
+  { nombre: 'Osarios Radices Altum',     descripcion: 'Espacios destinados a la preservación organizada de restos memoriales.',                                                   img: '/images/espacios/osario.png' },
+  { nombre: 'Panteón Familiar Radices',  descripcion: 'Espacios diseñados para la preservación memorial de varios miembros de una misma familia.',                               img: '/images/espacios/panteon-familiar.png' },
+  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Estructuras familiares exclusivas dentro del campus memorial.',                                                             img: '/images/espacios/mausoleo.png' },
 ];
 
 export default function MemorialSpaces() {
@@ -66,9 +66,16 @@ export default function MemorialSpaces() {
               variants={fadeUp}
               className="group bg-white border border-radices-gray rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 hover:-translate-y-1.5 overflow-hidden flex flex-col"
             >
-              {/* PLACEHOLDER */}
-              <div className="bg-radices-gray h-36 rounded-xl flex items-center justify-center m-4">
-                <Leaf className="text-radices-light" size={32} />
+              {/* IMAGEN */}
+              <div className="relative h-48 overflow-hidden rounded-t-2xl">
+                <Image
+                  src={space.img}
+                  alt={space.nombre}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-radices-darker/30 to-transparent" />
               </div>
 
               {/* CONTENIDO */}
