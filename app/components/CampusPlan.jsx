@@ -88,7 +88,7 @@ export default function CampusPlan() {
                   contentStyle={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                   <Image
-                    src="/images/plano-hd.png"
+                    src="/images/plano-hd.webp"
                     alt="Plano maestro Campus Radices"
                     width={1200}
                     height={930}

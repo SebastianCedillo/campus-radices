@@ -14,11 +14,11 @@ const stagger = {
 };
 
 const spaces = [
-  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales diseñadas para preservar la memoria con dignidad y orden.',                                              img: '/images/espacios/boveda.png' },
-  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Espacios destinados al resguardo de urnas funerarias en un entorno natural y sereno.',                                     img: '/images/espacios/cenizario.png' },
-  { nombre: 'Osarios Radices Altum',     descripcion: 'Espacios destinados a la preservación organizada de restos memoriales.',                                                   img: '/images/espacios/osario.png' },
-  { nombre: 'Panteón Familiar Radices',  descripcion: 'Espacios diseñados para la preservación memorial de varios miembros de una misma familia.',                               img: '/images/espacios/panteon-familiar.png' },
-  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Estructuras familiares exclusivas dentro del campus memorial.',                                                             img: '/images/espacios/mausoleo.png' },
+  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales diseñadas para preservar la memoria con dignidad y orden.',                                              img: '/images/espacios/boveda.webp' },
+  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Espacios destinados al resguardo de urnas funerarias en un entorno natural y sereno.',                                     img: '/images/espacios/cenizario.webp' },
+  { nombre: 'Osarios Radices Altum',     descripcion: 'Espacios destinados a la preservación organizada de restos memoriales.',                                                   img: '/images/espacios/osario.webp' },
+  { nombre: 'Panteón Familiar Radices',  descripcion: 'Espacios diseñados para la preservación memorial de varios miembros de una misma familia.',                               img: '/images/espacios/panteon-familiar.webp' },
+  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Estructuras familiares exclusivas dentro del campus memorial.',                                                             img: '/images/espacios/mausoleo.webp' },
 ];
 
 export default function MemorialSpaces() {
