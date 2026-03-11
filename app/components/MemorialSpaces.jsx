@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Building2, Wind, Archive, Home, Crown, Landmark } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -14,11 +14,12 @@ const stagger = {
 };
 
 const spaces = [
-  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales diseñadas para preservar la memoria con dignidad y orden.',                                              img: '/images/espacios/boveda.webp' },
-  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Espacios destinados al resguardo de urnas funerarias en un entorno natural y sereno.',                                     img: '/images/espacios/cenizario.webp' },
-  { nombre: 'Osarios Radices Altum',     descripcion: 'Espacios destinados a la preservación organizada de restos memoriales.',                                                   img: '/images/espacios/osario.webp' },
-  { nombre: 'Panteón Familiar Radices',  descripcion: 'Espacios diseñados para la preservación memorial de varios miembros de una misma familia.',                               img: '/images/espacios/panteon-familiar.webp' },
-  { nombre: 'Mausoleo Familiar Radices', descripcion: 'Estructuras familiares exclusivas dentro del campus memorial.',                                                             img: '/images/espacios/mausoleo.webp' },
+  { nombre: 'Bóvedas Radices Altum',     descripcion: 'Bóvedas memoriales diseñadas para preservar la memoria con dignidad y orden.',                                icon: Building2 },
+  { nombre: 'Cenizarios Radices Arbor',  descripcion: 'Espacios destinados al resguardo de urnas funerarias en un entorno natural y sereno.',                       icon: Wind },
+  { nombre: 'Osarios Radices Altum',     descripcion: 'Espacios destinados a la preservación organizada de restos memoriales.',                                      icon: Archive },
+  { nombre: 'Panteón Familiar Radices',  descripcion: 'Espacios diseñados para la preservación memorial de varios miembros de una misma familia.',                  icon: Home },
+  { nombre: 'Mausoleo Familiar Radices',    descripcion: 'Estructuras familiares exclusivas dentro del campus memorial.',                                                                                          icon: Crown },
+  { nombre: 'Panteón Monumental Radices',   descripcion: 'Estructuras monumentales subterráneas de mayor capacidad, destinadas a la preservación memorial de varias generaciones familiares.',                icon: Landmark },
 ];
 
 export default function MemorialSpaces() {
@@ -60,44 +61,42 @@ export default function MemorialSpaces() {
           whileInView="show"
           viewport={{ once: true, amount: 0.05 }}
         >
-          {spaces.map((space, idx) => (
-            <motion.article
-              key={idx}
-              variants={fadeUp}
-              className="group bg-white border border-radices-gray rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 hover:-translate-y-1.5 overflow-hidden flex flex-col"
-            >
-              {/* IMAGEN */}
-              <div className="relative h-48 overflow-hidden rounded-t-2xl">
-                <Image
-                  src={space.img}
-                  alt={space.nombre}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-radices-darker/30 to-transparent" />
-              </div>
-
-              {/* CONTENIDO */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-display text-radices-darker mb-2 leading-snug">
-                  {space.nombre}
-                </h3>
-                <p className="text-radices-text font-body leading-relaxed text-sm flex-1">
-                  {space.descripcion}
-                </p>
-                <div className="mt-5 pt-4 border-t border-radices-gray">
-                  <a
-                    href="#contacto"
-                    className="text-xs font-semibold text-radices-light hover:text-radices-dark transition-colors inline-flex items-center gap-1"
-                  >
-                    Más información
-                    <span className="text-base leading-none">→</span>
-                  </a>
+          {spaces.map((space, idx) => {
+            const Icon = space.icon;
+            return (
+              <motion.article
+                key={idx}
+                variants={fadeUp}
+                className="group bg-white border border-radices-gray rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-400 hover:-translate-y-1.5 flex flex-col"
+              >
+                {/* ÍCONO */}
+                <div className="flex justify-center pt-10 pb-4">
+                  <div className="w-20 h-20 rounded-full bg-radices-gray flex items-center justify-center group-hover:bg-radices-light/15 transition-colors duration-300">
+                    <Icon size={36} className="text-radices-dark group-hover:text-radices-light transition-colors duration-300" strokeWidth={1.5} />
+                  </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+
+                {/* CONTENIDO */}
+                <div className="p-6 pt-2 flex flex-col flex-1 text-center">
+                  <h3 className="text-lg font-display text-radices-darker mb-2 leading-snug">
+                    {space.nombre}
+                  </h3>
+                  <p className="text-radices-text font-body leading-relaxed text-sm flex-1">
+                    {space.descripcion}
+                  </p>
+                  <div className="mt-5 pt-4 border-t border-radices-gray">
+                    <a
+                      href="#contacto"
+                      className="text-xs font-semibold text-radices-light hover:text-radices-dark transition-colors inline-flex items-center justify-center gap-1"
+                    >
+                      Más información
+                      <span className="text-base leading-none">→</span>
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
         </motion.div>
 
       </div>

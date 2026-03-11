@@ -75,18 +75,17 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-sm font-semibold tracking-[0.3em] uppercase text-radices-light mb-8"
+            className="text-xl sm:text-2xl font-semibold tracking-[0.3em] uppercase text-radices-light mb-8"
           >
             Campus Radices
           </motion.p>
 
           <motion.h1
             variants={fadeUp}
-            className="text-6xl sm:text-7xl md:text-8xl font-display leading-tight mb-6"
+            className="font-display leading-tight mb-6"
           >
-            <span className="text-radices-dark">La paz</span>
-            <br />
-            <span className="text-radices-darker">también se planifica.</span>
+            <span className="block text-7xl sm:text-8xl md:text-9xl text-radices-dark">La paz</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl text-radices-darker">también se planifica</span>
           </motion.h1>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-8">

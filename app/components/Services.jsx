@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Moon, Leaf, Flame, RefreshCw, FileText, Flower2, BookOpen, Star } from 'lucide-react';
+import { Moon, Leaf, Flame, RefreshCw, FileText, Flower2, BookOpen, Star, Truck } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,6 +22,7 @@ const services = [
   { nombre: 'Flora Sancta',       descripcion: 'Arreglos florales memoriales.',                        icon: Flower2 },
   { nombre: 'Oratio Pacis',       descripcion: 'Servicios ceremoniales y religiosos.',                 icon: BookOpen },
   { nombre: 'Ritus Memoriae',     descripcion: 'Ritos conmemorativos y ceremoniales.',                 icon: Star },
+  { nombre: 'Transitus Sacrum',   descripcion: 'Traslado funerario.',                                  icon: Truck },
 ];
 
 export default function Services() {
