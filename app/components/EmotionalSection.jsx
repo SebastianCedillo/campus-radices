@@ -27,7 +27,7 @@ export default function EmotionalSection() {
             className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg order-2 md:order-1"
           >
             <Image
-              src="/images/familia-emocional.jpg"
+              src="/images/familia_emocional.png"
               alt="Familia unida en un momento de serenidad"
               fill
               className="object-cover"

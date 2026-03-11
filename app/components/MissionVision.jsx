@@ -25,15 +25,10 @@ export default function MissionVision() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.span variants={fadeUp}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4"
+            className="text-2xl md:text-3xl font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4"
           >
             Quiénes somos
           </motion.span>
-          <motion.h2 variants={fadeUp}
-            className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
-          >
-            Misión y visión
-          </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full" />
         </motion.div>
 

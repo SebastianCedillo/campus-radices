@@ -42,7 +42,9 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
 
           <Link href="/" className="hover:opacity-90 transition-opacity">
-            <Logo size={84} />
+            <div className="rounded-full border-[3px] border-radices-dark p-2 bg-white">
+              <Logo size={64} />
+            </div>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

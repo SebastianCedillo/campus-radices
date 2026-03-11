@@ -51,7 +51,7 @@ export default function BrandMessage() {
             className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg"
           >
             <Image
-              src="/images/familia-mensaje.jpg"
+              src="/images/familia_mensaje.png"
               alt="Familia unida planificando su tranquilidad"
               fill
               className="object-cover"

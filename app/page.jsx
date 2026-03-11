@@ -50,7 +50,7 @@ export default function Home() {
         {/* Marca de agua: paisaje */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/hero.png"
             alt=""
             fill
             className="object-cover"
@@ -68,7 +68,9 @@ export default function Home() {
         >
           {/* Logo centrado */}
           <motion.div variants={fadeUp} className="flex justify-center mb-6">
-            <Logo size={120} />
+            <div className="rounded-full border-[3px] border-radices-dark p-4 bg-white shadow-[0_0_20px_rgba(74,125,62,0.25)]">
+              <Logo size={110} />
+            </div>
           </motion.div>
 
           <motion.p
@@ -159,7 +161,7 @@ export default function Home() {
               className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg order-2 md:order-1"
             >
               <Image
-                src="/images/familia-planificacion.jpg"
+                src="/images/familia_planificacion.png"
                 alt="Familia planificando su tranquilidad con anticipación"
                 fill
                 className="object-cover"
