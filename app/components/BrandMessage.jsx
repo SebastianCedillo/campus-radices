@@ -24,7 +24,7 @@ export default function BrandMessage() {
               Nuestra razón de ser
             </motion.span>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-display text-radices-darker mb-6 leading-tight">
-              Planificar hoy es brindar tranquilidad mañana.
+              Planificar hoy es brindar tranquilidad mañana
             </motion.h2>
             <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-8 rounded-full" />
             <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">

@@ -15,6 +15,7 @@ import TrustSection  from '@/app/components/TrustSection';
 import HowWeSupport   from '@/app/components/HowWeSupport';
 import FAQ            from '@/app/components/FAQ';
 import ContactSection from '@/app/components/ContactSection';
+import ClubFundador   from '@/app/components/ClubFundador';
 import WhatsAppFloat  from '@/app/components/WhatsAppFloat';
 
 const fadeUp = {
@@ -82,10 +83,10 @@ export default function Home() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-display leading-tight mb-6"
+            className="font-display mb-6"
           >
-            <span className="block text-7xl sm:text-8xl md:text-9xl text-radices-dark">La paz</span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl text-radices-darker">también se planifica</span>
+            <span className="block text-7xl sm:text-8xl md:text-9xl text-radices-dark leading-none mb-3">La paz</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl text-radices-darker leading-snug">también se planifica</span>
           </motion.h1>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-8">
@@ -109,16 +110,10 @@ export default function Home() {
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center">
             <a
-              href="#planes"
-              className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Conocer cómo planificar
-            </a>
-            <a
               href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border-2 border-radices-mid text-radices-mid font-semibold rounded-full hover:bg-radices-mid/5 transition-all duration-300"
+              className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
             >
               Hablar con un asesor
             </a>
@@ -230,6 +225,9 @@ export default function Home() {
 
       {/* ═══ CÓMO ACOMPAÑAMOS ════════════════════════════════════════════════ */}
       <HowWeSupport />
+
+      {/* ═══ CLUB FUNDADOR ═══════════════════════════════════════════════════ */}
+      <ClubFundador />
 
       {/* ═══ CONTACTO ════════════════════════════════════════════════════════ */}
       <ContactSection />

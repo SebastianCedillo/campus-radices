@@ -87,7 +87,7 @@ export default function PreventivePlans() {
           >
             <div className="p-10 text-white">
               <h3 className="text-2xl md:text-3xl font-display mb-4 leading-snug">
-                Planificar hoy es proteger a quienes amas.
+                Planificar hoy es proteger a quienes amas
               </h3>
               <p className="font-body text-white/75 leading-relaxed">
                 Un asesor de Campus Radices puede orientarte para elegir la alternativa más adecuada para tu familia.
