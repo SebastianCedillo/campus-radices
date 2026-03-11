@@ -156,7 +156,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg"
+              className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg order-2 md:order-1"
             >
               <Image
                 src="/images/familia-planificacion.jpg"
@@ -174,6 +174,7 @@ export default function Home() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
+              className="order-1 md:order-2"
             >
               <motion.span variants={fadeUp}
                 className="text-xs font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4"
