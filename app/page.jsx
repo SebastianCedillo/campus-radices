@@ -88,13 +88,7 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-lg text-radices-text/80 font-body leading-relaxed mb-2"
-          >
-            Planificar hoy es un acto de amor que protege a tu familia y preserva la memoria con dignidad.
-          </motion.p>
-          <motion.p
-            variants={fadeUp}
-            className="text-base text-radices-text/60 font-body leading-relaxed mb-10"
+            className="text-xl sm:text-2xl text-radices-text/80 font-body leading-relaxed mb-10"
           >
             Un espacio memorial pensado para las familias de Esmeraldas.
           </motion.p>
