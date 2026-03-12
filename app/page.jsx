@@ -62,14 +62,14 @@ export default function Home() {
 
         {/* Contenido centrado */}
         <motion.div
-          className="relative z-10 text-center max-w-3xl mx-auto px-6 pt-8 pb-20"
+          className="relative z-10 text-center max-w-3xl mx-auto px-6 pt-0 pb-20"
           variants={stagger}
           initial="hidden"
           animate="show"
         >
           {/* Logo centrado */}
           <motion.div variants={fadeUp} className="flex justify-center mb-8">
-            <Logo size={160} />
+            <Logo size={220} />
           </motion.div>
 
           <motion.h1
