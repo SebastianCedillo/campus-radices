@@ -90,7 +90,7 @@ export default function ClubFundador() {
             className="flex justify-center"
           >
             <Image
-              src="/images/club_fundador_transparente.png"
+              src="/images/club_fundador_transparente.webp"
               alt="Medalla Club Fundador Campus Radices"
               width={300}
               height={280}
