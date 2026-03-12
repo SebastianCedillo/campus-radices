@@ -80,7 +80,7 @@ export default function Home() {
             <span className="block text-3xl sm:text-4xl md:text-5xl text-radices-darker leading-snug">también se planifica</span>
           </motion.h1>
 
-          <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-8">
+          <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-16 bg-radices-light/50" />
             <div className="w-1.5 h-1.5 rounded-full bg-radices-light" />
             <div className="h-px w-16 bg-radices-light/50" />
