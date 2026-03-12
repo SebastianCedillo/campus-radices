@@ -45,14 +45,9 @@ export default function TrustSection() {
             </motion.h2>
             <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-8 rounded-full" />
             <motion.p variants={fadeUp}
-              className="text-lg text-radices-text font-body leading-relaxed mb-5"
-            >
-              Campus Radices es un proyecto memorial privado concebido para ofrecer a las familias de Esmeraldas un espacio digno, organizado y sostenible para preservar la memoria familiar.
-            </motion.p>
-            <motion.p variants={fadeUp}
               className="text-lg text-radices-text font-body leading-relaxed"
             >
-              El desarrollo del campus contempla una planificación integral que incluye aspectos arquitectónicos, ambientales y jurídicos, orientados a garantizar un espacio memorial respetuoso con la naturaleza y con las familias.
+              Campus Radices es un proyecto memorial privado concebido para ofrecer a las familias de Esmeraldas un espacio digno, organizado y sostenible para preservar la memoria familiar.
             </motion.p>
           </motion.div>
 
