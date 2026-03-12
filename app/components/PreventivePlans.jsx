@@ -94,16 +94,13 @@ export default function PreventivePlans() {
               </p>
             </div>
 
-            <div className="px-10 pb-10 space-y-4">
+            <div className="px-10 pb-10">
               <a
                 href="#contacto"
-                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-lg"
               >
                 Solicitar asesoría
               </a>
-              <p className="text-center text-xs text-white/45 font-body">
-                Consulta inicial sin costo · Atención personalizada
-              </p>
             </div>
           </motion.div>
 
