@@ -15,7 +15,8 @@ import TrustSection  from '@/app/components/TrustSection';
 import HowWeSupport   from '@/app/components/HowWeSupport';
 import FAQ            from '@/app/components/FAQ';
 import ContactSection from '@/app/components/ContactSection';
-import ClubFundador   from '@/app/components/ClubFundador';
+import ClubFundador    from '@/app/components/ClubFundador';
+import ClubFundadorAlt from '@/app/components/ClubFundadorAlt';
 import WhatsAppFloat  from '@/app/components/WhatsAppFloat';
 
 const fadeUp = {
@@ -213,6 +214,7 @@ export default function Home() {
 
       {/* ═══ CLUB FUNDADOR ═══════════════════════════════════════════════════ */}
       <ClubFundador />
+      <ClubFundadorAlt />
 
       {/* ═══ CONTACTO ════════════════════════════════════════════════════════ */}
       <ContactSection />
