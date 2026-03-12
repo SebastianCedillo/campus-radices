@@ -94,7 +94,7 @@ export default function PreventivePlans() {
               </p>
             </div>
 
-            <div className="px-10 pb-10">
+            <div className="px-10 pb-10 flex justify-center">
               <a
                 href="#contacto"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-radices-light text-white font-semibold rounded-xl hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-lg"
