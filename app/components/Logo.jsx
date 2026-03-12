@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Logo({ size = 48 }) {
   return (
     <Image
-      src="/images/logo-transparente.png"
+      src="/images/logo_campus_radices.png"
       alt="Campus Radices"
       width={size}
       height={size}

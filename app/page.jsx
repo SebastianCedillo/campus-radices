@@ -68,18 +68,9 @@ export default function Home() {
           animate="show"
         >
           {/* Logo centrado */}
-          <motion.div variants={fadeUp} className="flex justify-center mb-6">
-            <div className="rounded-full border-[3px] border-radices-dark p-4 bg-white shadow-[0_0_20px_rgba(74,125,62,0.25)]">
-              <Logo size={110} />
-            </div>
+          <motion.div variants={fadeUp} className="flex justify-center mb-8">
+            <Logo size={160} />
           </motion.div>
-
-          <motion.p
-            variants={fadeUp}
-            className="text-xl sm:text-2xl font-semibold tracking-[0.3em] uppercase text-radices-light mb-8"
-          >
-            Campus Radices
-          </motion.p>
 
           <motion.h1
             variants={fadeUp}
