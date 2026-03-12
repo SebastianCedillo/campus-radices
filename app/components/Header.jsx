@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import Logo from './Logo';
 
 const navLinks = [
   { href: '#inicio',    label: 'Inicio' },
@@ -42,7 +42,16 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
 
           <Link href="/" className="hover:opacity-90 transition-opacity">
-            <Logo size={72} />
+            <div className="rounded-full border-[2.5px] border-radices-dark p-1.5 bg-white">
+              <Image
+                src="/images/logo-transparente.png"
+                alt="Campus Radices"
+                width={56}
+                height={56}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
