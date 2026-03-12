@@ -45,7 +45,7 @@ export default function MissionVision() {
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
             <h3 className="text-3xl font-display mb-6">Nuestra misión</h3>
             <p className="font-body text-lg leading-relaxed text-white/85">
-              Brindar a las familias de Esmeraldas en Ecuador, un espacio memorial digno y organizado, promoviendo la planificación anticipada como una forma responsable de proteger a quienes amamos y preservar la memoria con respeto.
+              Brindar a las familias de Esmeraldas, un espacio memorial digno y organizado, promoviendo la planificación anticipada como una forma responsable de proteger a quienes amamos y preservar la memoria con respeto.
             </p>
           </motion.div>
 
