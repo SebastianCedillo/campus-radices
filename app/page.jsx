@@ -88,9 +88,9 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-xl sm:text-2xl text-radices-text/80 font-body leading-relaxed mb-10"
+            className="text-xl sm:text-2xl text-black font-body italic leading-relaxed mb-10"
           >
-            Un espacio memorial pensado para las familias de Esmeraldas.
+            Un espacio memorial pensado para las familias de Esmeraldas
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center">
