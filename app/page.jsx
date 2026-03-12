@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Contenido centrado */}
         <motion.div
-          className="relative z-10 text-center max-w-3xl mx-auto px-6 py-20"
+          className="relative z-10 text-center max-w-3xl mx-auto px-6 pt-8 pb-20"
           variants={stagger}
           initial="hidden"
           animate="show"
