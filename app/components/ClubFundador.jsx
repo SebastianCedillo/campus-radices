@@ -24,7 +24,7 @@ export default function ClubFundador() {
       </div>
 
       <div className="relative max-w-4xl mx-auto">
-        <div className="grid grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
           {/* LEFT: texto */}
           <motion.div
@@ -38,12 +38,8 @@ export default function ClubFundador() {
               variants={fadeUp}
               className="font-display leading-tight mb-5"
               style={{
-                fontSize: 'clamp(2.8rem, 6vw, 4rem)',
-                background: 'linear-gradient(180deg, #c49a3c 0%, #8b6010 30%, #d4a832 55%, #7a4e0c 80%, #c49a3c 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                filter: 'drop-shadow(0px 2px 3px rgba(0,0,0,0.25))',
+                fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
+                color: '#6b4510',
               }}
             >
               Club Fundador
