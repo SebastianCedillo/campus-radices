@@ -20,13 +20,7 @@ export default function ClubFundador() {
     >
       {/* Watermark logo fondo */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.06] pointer-events-none select-none">
-        <Image
-          src="/images/logo-transparente.png"
-          alt=""
-          width={460}
-          height={460}
-          style={{ objectFit: 'contain' }}
-        />
+        <Image src="/images/logo-transparente.png" alt="" width={460} height={460} style={{ objectFit: 'contain' }} />
       </div>
 
       <div className="relative max-w-4xl mx-auto">
@@ -39,13 +33,17 @@ export default function ClubFundador() {
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
+            {/* Título con gradiente metálico dorado */}
             <motion.h2
               variants={fadeUp}
               className="font-display leading-tight mb-5"
               style={{
-                fontSize: 'clamp(2.6rem, 5.5vw, 3.6rem)',
-                color: '#3a1f08',
-                textShadow: '1px 2px 6px rgba(0,0,0,0.18)',
+                fontSize: 'clamp(2.8rem, 6vw, 4rem)',
+                background: 'linear-gradient(180deg, #c49a3c 0%, #8b6010 30%, #d4a832 55%, #7a4e0c 80%, #c49a3c 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0px 2px 3px rgba(0,0,0,0.25))',
               }}
             >
               Club Fundador
@@ -54,28 +52,32 @@ export default function ClubFundador() {
             <motion.p
               variants={fadeUp}
               className="font-body leading-relaxed mb-8"
-              style={{ fontSize: '1rem', color: '#2a1508', lineHeight: '1.7' }}
+              style={{ fontSize: '1.1rem', color: '#2a1508', lineHeight: '1.75' }}
             >
               Estamos invitando a las primeras familias a formar parte del Club Fundador de Campus Radices, una etapa inicial que ofrece condiciones preferenciales y beneficios exclusivos de preventa.
             </motion.p>
 
+            {/* Botón igual al de la imagen: caja oscura redondeada, texto claro centrado */}
             <motion.a
               variants={fadeUp}
               href="https://wa.me/593999482328"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-body text-sm transition-all duration-300 hover:brightness-90"
+              className="inline-flex flex-col items-center justify-center font-body transition-all duration-300 hover:brightness-110"
               style={{
-                background: '#2a1508',
-                color: '#f0e0c8',
-                padding: '14px 28px',
-                borderRadius: '4px',
-                letterSpacing: '0.02em',
-                lineHeight: '1.4',
+                background: 'linear-gradient(145deg, #3d2810 0%, #251508 100%)',
+                color: '#e8d5b0',
+                padding: '16px 36px',
+                borderRadius: '8px',
+                fontSize: '1.05rem',
+                lineHeight: '1.5',
+                letterSpacing: '0.01em',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,200,100,0.1)',
                 textAlign: 'center',
               }}
             >
-              Contactar por<br />Whatsapp
+              <span>Contactar por</span>
+              <span>Whatsapp</span>
             </motion.a>
           </motion.div>
 
@@ -92,21 +94,16 @@ export default function ClubFundador() {
               alt="Medalla Club Fundador Campus Radices"
               width={300}
               height={280}
-              style={{ objectFit: 'contain', filter: 'drop-shadow(0 12px 30px rgba(0,0,0,0.35))' }}
+              style={{ objectFit: 'contain', filter: 'drop-shadow(0 16px 40px rgba(0,0,0,0.45))' }}
             />
           </motion.div>
 
         </div>
 
         {/* Logo pie */}
-        <div className="flex justify-center mt-10 opacity-25">
-          <Image
-            src="/images/logo-transparente.png"
-            alt=""
-            width={28}
-            height={28}
-            style={{ objectFit: 'contain', filter: 'brightness(0)' }}
-          />
+        <div className="flex justify-center mt-10 opacity-20">
+          <Image src="/images/logo-transparente.png" alt="" width={28} height={28}
+            style={{ objectFit: 'contain', filter: 'brightness(0)' }} />
         </div>
       </div>
     </section>
