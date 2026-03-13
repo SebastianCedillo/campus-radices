@@ -13,11 +13,11 @@ const stagger = {
 };
 
 const steps = [
-  { num: '01', label: 'Certificado médico de defunción' },
-  { num: '02', label: 'Elección del lugar de velación' },
-  { num: '03', label: 'Contratación del servicio funerario' },
-  { num: '04', label: 'Velación' },
-  { num: '05', label: 'Ceremonia final' },
+  { num: '01', label: 'Tomar la decisión de proteger a la familia y evitar decisiones difíciles en momentos de dolor' },
+  { num: '02', label: 'Elegir el espacio memorial' },
+  { num: '03', label: 'Garantizar el lugar elegido' },
+  { num: '04', label: 'Formalizar la planificación' },
+  { num: '05', label: 'Tener todo previsto para cuando llegue el momento' },
 ];
 
 export default function HowWeSupport() {
@@ -41,7 +41,7 @@ export default function HowWeSupport() {
           <motion.h2 variants={fadeUp}
             className="text-4xl md:text-5xl font-display text-radices-darker mb-4 leading-tight"
           >
-            ¿Cómo acompañamos tu despedida?
+            ¿Cómo funciona la previsión?
           </motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full" />
         </motion.div>

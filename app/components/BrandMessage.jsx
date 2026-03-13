@@ -23,23 +23,23 @@ export default function BrandMessage() {
             <motion.span variants={fadeUp} className="text-xs font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4">
               Nuestra razón de ser
             </motion.span>
-            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-display text-radices-darker mb-6 leading-tight">
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-display text-radices-darker mb-3 leading-tight">
               Planificar hoy es brindar tranquilidad mañana
             </motion.h2>
+            <motion.p variants={fadeUp} className="text-xl font-body italic text-radices-brown mb-6">
+              Amar implica pensar en el futuro
+            </motion.p>
             <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mb-8 rounded-full" />
             <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
-              La planificación memorial permite tomar decisiones con serenidad, proteger a la familia de cargas inesperadas y preservar la memoria con respeto.
+              La planificación memorial permite tomar decisiones con serenidad, proteger a la familia de cargas inesperadas y preservar la memoria con respeto y dignidad.
             </motion.p>
             <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
-              Campus Radices nace con un propósito claro: ofrecer a las familias un espacio digno donde la memoria, la tranquilidad y la previsión puedan organizarse con tiempo.
-            </motion.p>
-            <motion.p variants={fadeUp} className="text-lg text-radices-text font-body leading-relaxed mb-5">
-              Creemos firmemente que la paz familiar no debe improvisarse.
+              En Campus Radices te ayudamos a construir la tranquilidad de tus seres queridos con anticipación.
             </motion.p>
             <motion.p variants={fadeUp}
               className="text-xl font-display italic text-radices-dark border-l-4 border-radices-light pl-4"
             >
-              Por eso nace nuestro principio fundamental: La paz también se planifica.
+              La paz también se planifica.
             </motion.p>
           </motion.div>
           {/* RIGHT: imagen familiar */}

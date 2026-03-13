@@ -48,10 +48,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(198,164,122,0.1)_0%,_transparent_60%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(166,124,82,0.05)_0%,_transparent_50%)] pointer-events-none" />
 
-        {/* Marca de agua: paisaje */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
+        {/* Fondo / marca de agua */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.35]">
           <Image
-            src="/images/hero.png"
+            src="/images/fondo.jpeg"
             alt=""
             fill
             className="object-cover"
