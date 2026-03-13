@@ -36,7 +36,7 @@ export default function ClubFundador() {
             {/* Título con gradiente metálico dorado */}
             <motion.h2
               variants={fadeUp}
-              className="font-display leading-tight mb-5"
+              className="font-display leading-tight mb-3"
               style={{
                 fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
                 color: '#6b4510',
@@ -44,6 +44,7 @@ export default function ClubFundador() {
             >
               Club Fundador
             </motion.h2>
+            <motion.div variants={fadeUp} className="w-16 h-1 rounded-full mb-5" style={{ background: '#6b4510' }} />
 
             <motion.p
               variants={fadeUp}
