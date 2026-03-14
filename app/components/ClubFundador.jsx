@@ -57,7 +57,7 @@ export default function ClubFundador() {
             {/* Botón igual al de la imagen: caja oscura redondeada, texto claro centrado */}
             <motion.a
               variants={fadeUp}
-              href="https://wa.me/593999482328"
+              href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center justify-center font-body transition-all duration-300 hover:brightness-110"

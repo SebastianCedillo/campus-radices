@@ -34,10 +34,10 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Formulario:', formData);
-    setSent(true);
+    const texto = `Hola, mi nombre es ${formData.nombre} ${formData.apellido}.${formData.telefono ? ` Mi teléfono es ${formData.telefono}.` : ''} ${formData.mensaje}`.trim();
+    const url = `https://wa.me/593962788765?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
     setFormData({ nombre: '', apellido: '', telefono: '', mensaje: '' });
-    setTimeout(() => setSent(false), 5000);
   };
 
   return (
