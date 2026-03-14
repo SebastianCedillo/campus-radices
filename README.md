@@ -13,6 +13,7 @@ Sitio web institucional para **Campus Radices**, proyecto de planificación fune
 | Tailwind CSS | 3 | Estilos |
 | Framer Motion | 12 | Animaciones |
 | Lucide React | 0.577 | Íconos |
+| Sharp | — | Procesamiento de imágenes |
 
 ---
 
@@ -44,19 +45,27 @@ campus-radices/
 │   └── components/
 │       ├── Header.jsx          # Navbar fijo con hide-on-scroll y menú mobile
 │       ├── Footer.jsx          # Pie de página con links y redes sociales
-│       ├── Logo.jsx            # Logo SVG del campus
-│       ├── MissionVision.jsx   # Sección Misión y Visión (#nosotros)
+│       ├── BrandMessage.jsx    # Sección Nuestra razón de ser
+│       ├── MissionVision.jsx   # Sección Quiénes somos
 │       ├── CorporateValues.jsx # Sección Valores que guían el proyecto
-│       ├── HowWeSupport.jsx    # Sección ¿Por qué planificar? / Prever es un acto de amor
-│       ├── Services.jsx        # Sección Servicios proyectados (#servicios)
-│       ├── MemorialSpaces.jsx  # Sección Espacios memoriales (#espacios)
-│       ├── PreventivePlans.jsx # Sección Planes funerarios prepagados (#planes)
+│       ├── TrustSection.jsx    # Sección Confianza y respaldo
+│       ├── CampusPlan.jsx      # Sección Plano del campus interactivo
+│       ├── ClubFundador.jsx    # Sección Club Fundador
+│       ├── HowWeSupport.jsx    # Sección ¿Cómo funciona la previsión?
+│       ├── Services.jsx        # Sección Servicios exequiales
+│       ├── MemorialSpaces.jsx  # Sección Espacios memoriales
+│       ├── PreventivePlans.jsx # Sección Planes de previsión
 │       ├── LegalProcedures.jsx # Sección Trámites legales
-│       └── ContactSection.jsx  # Sección Contacto con formulario (#contacto)
+│       └── ContactSection.jsx  # Sección Contacto
 ├── public/
 │   └── images/
-│       ├── hero-bg.jpg                  # Foto fondo del hero
-│       └── servicios/                   # Fotos de cada servicio (9 imágenes)
+│       ├── fondo.jpeg                   # Fondo del hero
+│       ├── logo-transparente.png        # Logo icono (header y hero)
+│       ├── logo_campus_radices.png      # Logo completo
+│       ├── fundador-nuevo.png           # Imagen Club Fundador
+│       ├── plano-hd.webp                # Plano del campus
+│       ├── familia_emocional.png        # Imagen sección BrandMessage
+│       └── familia_mensaje.png          # Imagen sección BrandMessage
 ├── styles/
 │   └── globals.css             # Google Fonts + Tailwind base
 ├── tailwind.config.js          # Paleta de colores, tipografía y sombras custom
@@ -86,35 +95,3 @@ campus-radices/
 - **Cuerpo / Body:** `Crimson Text` (serif) — clase Tailwind `font-body`
 
 Ambas fuentes se cargan desde Google Fonts en `styles/globals.css`.
-
----
-
-## Despliegue
-
-El proyecto se despliega automáticamente en **Vercel** al hacer push a la rama `main`.
-
-```bash
-git add .
-git commit -m "descripción del cambio"
-git push origin main
-```
-
-Vercel detecta el push y despliega en ~60 segundos.
-
----
-
-## Datos de contacto (producción)
-
-- **WhatsApp / Teléfono:** +593 99 948 2328
-- **Email:** ventas@campusradices.com
-- **Instagram:** [@campusradices](https://www.instagram.com/campusradices/)
-- **Emergencias:** 24/7
-
----
-
-## Pendiente del cliente
-
-- [ ] Fotos reales para servicios (`public/images/servicios/`)
-- [ ] Dirección física del campus
-- [ ] Links oficiales de Facebook y TikTok
-- [ ] Conectar formulario de contacto a un servicio de email (Resend, EmailJS, etc.)
