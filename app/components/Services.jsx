@@ -16,11 +16,11 @@ const stagger = {
 const services = [
   { nombre: 'Velatio Honoris',    descripcion: 'Sala ceremonial de velación.',                         icon: Moon },
   { nombre: 'Sepultura Pax',      descripcion: 'Servicio de sepultura memorial.',                      icon: Leaf },
-  { nombre: 'Ignus Eternum',      descripcion: 'Servicio de cremación.',                               icon: Flame },
-  { nombre: 'Memoria Renovatio',  descripcion: 'Renovación y mantenimiento memorial.',                 icon: RefreshCw },
+  { nombre: 'Ignis Aeternus',     descripcion: 'Servicio de cremación.',                               icon: Flame },
+  { nombre: 'Renovatio Memoriae', descripcion: 'Renovación y mantenimiento memorial.',                 icon: RefreshCw },
   { nombre: 'Gestio Legatum',     descripcion: 'Gestión administrativa y acompañamiento familiar.',    icon: FileText },
-  { nombre: 'Flora Sancta',       descripcion: 'Arreglos florales memoriales.',                        icon: Flower2 },
-  { nombre: 'Oratio Pacis',       descripcion: 'Servicios ceremoniales y religiosos.',                 icon: BookOpen },
+  { nombre: 'Flores Sancti',      descripcion: 'Arreglos florales memoriales.',                        icon: Flower2 },
+  { nombre: 'Preces Pacis',       descripcion: 'Servicios ceremoniales y religiosos.',                 icon: BookOpen },
   { nombre: 'Ritus Memoriae',     descripcion: 'Ritos conmemorativos y ceremoniales.',                 icon: Star },
   { nombre: 'Transitus Sacrum',   descripcion: 'Traslado funerario.',                                  icon: Truck },
 ];

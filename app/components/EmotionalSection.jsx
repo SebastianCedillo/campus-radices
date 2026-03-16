@@ -24,10 +24,10 @@ export default function EmotionalSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg order-2 md:order-1"
+            className="relative rounded-2xl overflow-hidden aspect-[3/4] max-w-sm mx-auto w-full order-2 md:order-1"
           >
             <Image
-              src="/images/familia_emocional.png"
+              src="/images/foto2.webp"
               alt="Familia unida en un momento de serenidad"
               fill
               className="object-cover"

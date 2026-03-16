@@ -13,11 +13,11 @@ const stagger = {
 };
 
 const steps = [
-  { num: '01', label: 'Tomar la decisión de proteger a la familia y evitar decisiones difíciles en momentos de dolor' },
-  { num: '02', label: 'Elegir el espacio memorial' },
-  { num: '03', label: 'Garantizar el lugar elegido' },
-  { num: '04', label: 'Formalizar la planificación' },
-  { num: '05', label: 'Tener todo previsto para cuando llegue el momento' },
+  { num: '01', label: 'Tomar la decisión de proteger a la familia y así evitar decisiones difíciles en momentos de dolor' },
+  { num: '02', label: 'Elegir el espacio memorial que formará parte del patrimonio familiar' },
+  { num: '03', label: 'Formalizar la planificación mediante un contrato claro y seguro' },
+  { num: '04', label: 'Garantizar la seguridad jurídica y la permanencia del espacio memorial a largo plazo' },
+  { num: '05', label: 'Vivir con la tranquilidad de haber planificado hoy lo que dará paz a la familia mañana' },
 ];
 
 export default function HowWeSupport() {

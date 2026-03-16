@@ -48,10 +48,10 @@ export default function BrandMessage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative rounded-2xl overflow-hidden h-80 md:h-[420px] shadow-card-lg"
+            className="relative rounded-2xl overflow-hidden h-80 md:h-[420px]"
           >
             <Image
-              src="/images/familia_mensaje.png"
+              src="/images/foto1.webp"
               alt="Familia unida planificando su tranquilidad"
               fill
               className="object-cover"

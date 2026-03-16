@@ -14,10 +14,12 @@ const stagger = {
 };
 
 const pillars = [
-  'Diseño arquitectónico moderno',
-  'Gestión ambiental responsable',
-  'Desarrollo progresivo por etapas',
-  'Estructura jurídica y organizativa sólida',
+  'Infraestructura diseñada para el bienestar y acompañamiento de las familias',
+  'Diseño arquitectónico moderno y armonioso con el entorno',
+  'Gestión ambiental responsable y sostenible',
+  'Desarrollo ordenado por etapas para garantizar calidad y permanencia',
+  'Estructura jurídica sólida que respalda la seguridad patrimonial',
+  'Administración profesional basada en transparencia y responsabilidad',
 ];
 
 export default function TrustSection() {
@@ -60,11 +62,11 @@ export default function TrustSection() {
             className="bg-white rounded-2xl p-10 shadow-card-lg"
           >
             <h3 className="text-2xl font-display text-radices-darker mb-2 leading-snug">
-              Un campus memorial pensado a largo plazo
+              Un campus memorial pensado para las familias de hoy y de las próximas generaciones
             </h3>
             <div className="w-12 h-1 bg-radices-light mb-6 rounded-full" />
             <p className="text-base font-body text-radices-text mb-6 leading-relaxed">
-              Su desarrollo contempla:
+              El proyecto contempla:
             </p>
             <ul className="space-y-5">
               {pillars.map((item, idx) => (

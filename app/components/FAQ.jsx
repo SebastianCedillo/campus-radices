@@ -11,20 +11,29 @@ const fadeUp = {
 
 const faqs = [
   {
-    pregunta: '¿Para qué planificar algo que yo no voy a ver?',
-    respuesta: 'La planificación memorial no es para quien parte, sino para quienes quedan. Planificar evita que la familia tenga que tomar decisiones difíciles bajo presión emocional y económica.',
+    pregunta: '¿Qué significa asegurar un espacio dentro del campus?',
+    respuesta: 'Es la certeza de contar con un lugar reservado dentro de un entorno diseñado para la memoria, el respeto y la serenidad. Asegurar este espacio hoy permite que el legado familiar tenga un destino definido, digno y organizado dentro de un campus memorial planificado a largo plazo.',
   },
   {
-    pregunta: '¿La planificación significa que el servicio se utilizará inmediatamente?',
-    respuesta: 'No. La planificación anticipada permite reservar espacios dentro del campus para cuando sea necesario.',
+    pregunta: '¿Planificar con anticipación es una forma de cuidado familiar?',
+    respuesta: 'Absolutamente. Planificar es un acto de responsabilidad y amor que protege a la familia, evitando que sus seres queridos deban tomar decisiones importantes en momentos de presión emocional. La previsión permite brindarles claridad, organización y tranquilidad para el futuro.',
   },
   {
-    pregunta: '¿Puedo planificar para varios miembros de mi familia?',
-    respuesta: 'Sí. Existen opciones de planificación familiar que permiten asegurar espacios para varios integrantes de la familia.',
+    pregunta: '¿Qué valor aporta saber que todo está contemplado?',
+    respuesta: 'Aporta una paz invaluable. Cuando los detalles han sido planificados con anticipación, la familia puede enfocarse únicamente en honrar la memoria y acompañarse mutuamente con serenidad, sin preocupaciones adicionales.',
   },
   {
-    pregunta: '¿La planificación memorial tiene beneficios para la familia?',
-    respuesta: 'Sí. Planificar permite evitar cargas económicas inesperadas, tomar decisiones con serenidad y garantizar que los deseos familiares se respeten.',
+    pregunta: '¿Es necesario pensar constantemente en el futuro para planificar?',
+    respuesta: 'No. La previsión memorial es una decisión responsable que se toma una sola vez. Es similar a cualquier planificación patrimonial: se organiza hoy para poder vivir con la tranquilidad de que todo está resuelto para el mañana.',
+  },
+  {
+    pregunta: '¿Cuáles son los beneficios de participar en esta etapa inicial?',
+    respuesta: 'Participar en esta fase del proyecto ofrece ventajas que no estarán disponibles en etapas posteriores:',
+    subItems: [
+      { titulo: 'Valor preferencial', descripcion: 'Permite acceder a un valor significativamente menor al precio que tendrá el campus una vez desarrollado.' },
+      { titulo: 'Acceso al Club Fundador', descripcion: 'Las primeras familias podrán formar parte del Club Fundador, con condiciones y distinciones exclusivas reservadas para un número limitado de participantes.' },
+      { titulo: 'Facilidad de financiamiento', descripcion: 'La etapa inicial permite estructurar la inversión con mayor flexibilidad, mientras el proyecto avanza hacia su desarrollo y apertura.' },
+    ],
   },
 ];
 
@@ -88,9 +97,19 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <p className="px-6 pb-5 text-radices-text font-body text-base leading-relaxed border-t border-radices-gray pt-4">
-                      {faq.respuesta}
-                    </p>
+                    <div className="px-6 pb-5 border-t border-radices-gray pt-4">
+                      <p className="text-radices-text font-body text-base leading-relaxed">{faq.respuesta}</p>
+                      {faq.subItems && (
+                        <ul className="mt-4 space-y-4">
+                          {faq.subItems.map((item, i) => (
+                            <li key={i}>
+                              <p className="font-display text-radices-darker text-base font-semibold mb-1">{item.titulo}</p>
+                              <p className="text-radices-text font-body text-base leading-relaxed">{item.descripcion}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

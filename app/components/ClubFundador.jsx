@@ -73,8 +73,7 @@ export default function ClubFundador() {
                 textAlign: 'center',
               }}
             >
-              <span>Contactar por</span>
-              <span>Whatsapp</span>
+              <span>Sé parte ahora mismo</span>
             </motion.a>
           </motion.div>
 

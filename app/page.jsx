@@ -76,8 +76,8 @@ export default function Home() {
             variants={fadeUp}
             className="font-display mb-6"
           >
-            <span className="block text-7xl sm:text-8xl md:text-9xl text-radices-dark leading-none mb-3">La paz</span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl text-radices-darker leading-snug">también se planifica</span>
+            <span className="block text-7xl sm:text-8xl md:text-9xl text-black leading-none mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>La paz</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl text-black leading-snug" style={{ fontFamily: "'Dancing Script', cursive" }}>también se planifica</span>
           </motion.h1>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-4">
@@ -88,9 +88,9 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-xl sm:text-2xl text-black font-body italic leading-relaxed mb-10"
+            className="text-xl sm:text-2xl text-black italic leading-relaxed mb-10" style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Un espacio memorial pensado para las familias de Esmeraldas
+            Un memorial diseñado para las familias de Esmeraldas
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center">
@@ -98,9 +98,9 @@ export default function Home() {
               href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+              className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5" style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              Hablar con un asesor
+              Conoce nuestro proyecto
             </a>
           </motion.div>
         </motion.div>
