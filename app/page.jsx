@@ -42,16 +42,15 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section id="inicio" className="bg-radices-cream min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden rounded-3xl mx-2 my-2">
 
-        {/* Fondos radiales sutiles */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(198,164,122,0.1)_0%,_transparent_60%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(166,124,82,0.05)_0%,_transparent_50%)] pointer-events-none" />
+        {/* Fondo crema base */}
+        <div className="absolute inset-0 bg-[#f0ebe3]" />
 
-        {/* Fondo / marca de agua */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.35]">
+        {/* Imagen como marca de agua */}
+        <div className="absolute inset-0 opacity-40">
           <Image
-            src="/images/fondo.jpeg"
+            src="/images/portada.webp"
             alt=""
             fill
             className="object-cover"
@@ -62,43 +61,56 @@ export default function Home() {
 
         {/* Contenido centrado */}
         <motion.div
-          className="relative z-10 text-center max-w-3xl mx-auto px-6 pt-0 pb-20"
+          className="relative z-10 text-center max-w-2xl mx-auto px-6 py-16"
           variants={stagger}
           initial="hidden"
           animate="show"
         >
-          {/* Logo centrado */}
+          {/* Logo con fondo blanco */}
           <motion.div variants={fadeUp} className="flex justify-center mb-8">
-            <Logo size={220} />
+            <div className="rounded-full bg-white border-[3px] border-radices-dark" style={{ width: 210, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2px' }}>
+              <Image
+                src="/images/logo_campus_radices.png"
+                alt="Campus Radices"
+                width={204}
+                height={204}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
           </motion.div>
 
-          <motion.h1
-            variants={fadeUp}
-            className="font-display mb-6"
-          >
-            <span className="block text-7xl sm:text-8xl md:text-9xl text-black leading-none mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>La paz</span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl text-black leading-snug" style={{ fontFamily: "'Dancing Script', cursive" }}>también se planifica</span>
+          <motion.h1 variants={fadeUp} className="mb-4" style={{ lineHeight: 1.4 }}>
+            <span className="block text-6xl sm:text-7xl md:text-8xl leading-none mb-0" style={{ fontFamily: "'Playfair Display', serif", color: '#1A1A1A', fontWeight: 700 }}>La paz</span>
+            <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap" style={{ fontFamily: "'Dancing Script', cursive", color: '#1A1A1A', fontWeight: 600, lineHeight: 1.4 }}>también se planifica</span>
           </motion.h1>
 
-          <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-16 bg-radices-light/50" />
-            <div className="w-1.5 h-1.5 rounded-full bg-radices-light" />
-            <div className="h-px w-16 bg-radices-light/50" />
+          {/* Línea separadora gris */}
+          <motion.div variants={fadeUp} className="flex justify-center mb-5 mt-3">
+            <div className="h-[3px] w-96 bg-gray-400/70" />
           </motion.div>
 
           <motion.p
             variants={fadeUp}
-            className="text-xl sm:text-2xl text-black italic leading-relaxed mb-10" style={{ fontFamily: "'Montserrat', sans-serif" }}
+            className="text-2xl sm:text-3xl leading-relaxed mb-10 italic"
+            style={{ fontFamily: "'Montserrat', sans-serif", color: '#1A1A1A', fontWeight: 300 }}
           >
-            Un memorial diseñado para las familias de Esmeraldas
+            Un memorial diseñado para<br />las familias de Esmeraldas
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-col gap-3 items-center">
+          <motion.div variants={fadeUp} className="flex justify-center">
             <a
               href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-radices-mid text-white font-semibold rounded-full hover:bg-radices-btn-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5" style={{ fontFamily: "'Lato', sans-serif" }}
+              className="px-16 py-3 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5"
+              style={{
+                backgroundColor: '#4a6428',
+                fontFamily: "'Montserrat', sans-serif",
+                letterSpacing: '0.02em',
+                border: '2px solid #7a9e44',
+                boxShadow: 'inset 0 0 0 2px rgba(255,255,255,0.6)'
+              }}
             >
               Conoce nuestro proyecto
             </a>
@@ -108,7 +120,7 @@ export default function Home() {
         {/* ChevronDown bounce */}
         <motion.a
           href="#nosotros"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-radices-darker/40 hover:text-radices-darker transition-colors"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.6, duration: 0.8 }}
