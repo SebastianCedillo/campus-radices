@@ -100,14 +100,14 @@ export default function FAQ() {
                     <div className="px-6 pb-5 border-t border-radices-gray pt-4">
                       <p className="text-radices-text font-body text-base leading-relaxed">{faq.respuesta}</p>
                       {faq.subItems && (
-                        <ul className="mt-4 space-y-4">
+                        <ol className="mt-4 space-y-4 list-decimal list-inside">
                           {faq.subItems.map((item, i) => (
                             <li key={i}>
-                              <p className="font-display text-radices-darker text-base font-semibold mb-1">{item.titulo}</p>
-                              <p className="text-radices-text font-body text-base leading-relaxed">{item.descripcion}</p>
+                              <span className="font-display text-radices-darker text-base font-semibold">{item.titulo}</span>
+                              <p className="text-radices-text font-body text-base leading-relaxed mt-1 ml-5">{item.descripcion}</p>
                             </li>
                           ))}
-                        </ul>
+                        </ol>
                       )}
                     </div>
                   </motion.div>
