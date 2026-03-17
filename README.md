@@ -49,21 +49,25 @@ campus-radices/
 │       ├── MissionVision.jsx   # Sección Quiénes somos
 │       ├── CorporateValues.jsx # Sección Valores que guían el proyecto
 │       ├── TrustSection.jsx    # Sección Confianza y respaldo
+│       ├── EmotionalSection.jsx# Sección emocional con imagen y cita
 │       ├── CampusPlan.jsx      # Sección Plano del campus interactivo
 │       ├── ClubFundador.jsx    # Sección Club Fundador
 │       ├── HowWeSupport.jsx    # Sección ¿Cómo funciona la previsión?
 │       ├── Services.jsx        # Sección Servicios exequiales
 │       ├── MemorialSpaces.jsx  # Sección Espacios memoriales
 │       ├── PreventivePlans.jsx # Sección Planes de previsión
+│       ├── FAQ.jsx             # Sección Preguntas frecuentes
 │       ├── LegalProcedures.jsx # Sección Trámites legales
-│       └── ContactSection.jsx  # Sección Contacto
+│       └── ContactSection.jsx  # Sección Contacto (formulario → WhatsApp)
 ├── public/
 │   └── images/
-│       ├── fondo.jpeg                   # Fondo del hero
+│       ├── portada.webp                 # Fondo del hero
 │       ├── logo-transparente.png        # Logo icono (header y hero)
 │       ├── logo_campus_radices.png      # Logo completo
 │       ├── fundador-nuevo.png           # Imagen Club Fundador
 │       ├── plano-hd.webp                # Plano del campus
+│       ├── foto1.webp                   # Imagen EmotionalSection
+│       ├── foto2.webp                   # Imagen BrandMessage
 │       ├── familia_emocional.png        # Imagen sección BrandMessage
 │       └── familia_mensaje.png          # Imagen sección BrandMessage
 ├── styles/
@@ -91,7 +95,10 @@ campus-radices/
 
 ## Tipografía
 
-- **Títulos / Display:** `Lora` (serif) — clase Tailwind `font-display`
+- **Hero título "La paz":** `Playfair Display` Bold (serif clásica)
+- **Hero acento "también se planifica":** `Great Vibes` (script manuscrita)
+- **Hero subtítulo y botón:** `Cormorant` italic (serif humanista)
+- **Títulos secciones:** `Lora` (serif) — clase Tailwind `font-display`
 - **Cuerpo / Body:** `Crimson Text` (serif) — clase Tailwind `font-body`
 
-Ambas fuentes se cargan desde Google Fonts en `styles/globals.css`.
+Fuentes cargadas desde Google Fonts en `styles/globals.css`. `Great Vibes` también se carga vía `next/font/google` para garantizar disponibilidad en todos los navegadores.
