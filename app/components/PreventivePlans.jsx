@@ -14,11 +14,11 @@ const stagger = {
 };
 
 const benefits = [
-  'Proteger a los seres queridos',
-  'Evitar cargas económicas inesperadas',
-  'Organizar decisiones importantes',
-  'Planificar con anticipación',
-  'Congelar precios',
+  'Velar por la armonía y paz de los que amas.',
+  'Proteger la economía de tu hogar frente al tiempo.',
+  'Elegir con calma lo que es mejor para todos.',
+  'Transformar la previsión en un acto de amor.',
+  'Asegurar su inversión con los precios preferenciales e irrepetibles de hoy.',
 ];
 
 export default function PreventivePlans() {

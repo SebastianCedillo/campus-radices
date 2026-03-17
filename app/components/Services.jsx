@@ -18,7 +18,7 @@ const services = [
   { nombre: 'Sepultura Pax',      descripcion: 'Servicio de sepultura memorial.',                      icon: Leaf },
   { nombre: 'Ignis Aeternus',     descripcion: 'Servicio de cremación.',                               icon: Flame },
   { nombre: 'Renovatio Memoriae', descripcion: 'Renovación y mantenimiento memorial.',                 icon: RefreshCw },
-  { nombre: 'Gestio Legatum',     descripcion: 'Gestión administrativa y acompañamiento familiar.',    icon: FileText },
+  { nombre: 'Gestio Legatum',     descripcion: 'Gestión legal y administrativa.',    icon: FileText },
   { nombre: 'Flores Sancti',      descripcion: 'Arreglos florales memoriales.',                        icon: Flower2 },
   { nombre: 'Preces Pacis',       descripcion: 'Servicios ceremoniales y religiosos.',                 icon: BookOpen },
   { nombre: 'Ritus Memoriae',     descripcion: 'Ritos conmemorativos y ceremoniales.',                 icon: Star },

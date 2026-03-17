@@ -160,10 +160,10 @@ export default function ContactSection() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono</label>
+                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono *</label>
                 <input
                   type="tel" name="telefono" value={formData.telefono}
-                  onChange={handleChange}
+                  onChange={handleChange} required
                   className={inputClass} placeholder="+593 99 XXX XXXX"
                 />
               </div>
