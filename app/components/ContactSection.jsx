@@ -166,6 +166,7 @@ export default function ContactSection() {
                   onChange={(e) => { const v = e.target.value.replace(/[^\d+\s\-()]/g, ''); setFormData(prev => ({ ...prev, telefono: v })); }}
                   required className={inputClass} placeholder="+593 99 XXX XXXX"
                 />
+                <p className="text-xs text-gray-400 mt-1">Solo se permiten números y el símbolo +</p>
               </div>
 
               <div>
