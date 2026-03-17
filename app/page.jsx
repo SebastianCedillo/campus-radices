@@ -98,12 +98,12 @@ export default function Home() {
             Un memorial diseñado para<br />las familias de Esmeraldas
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex justify-center">
+          <motion.div variants={fadeUp} className="flex justify-center px-8">
             <a
               href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-16 py-3 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5"
+              className="px-10 py-3 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 inline-block"
               style={{
                 backgroundColor: '#4a6428',
                 fontFamily: "'Montserrat', sans-serif",
