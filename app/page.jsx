@@ -44,7 +44,7 @@ export default function Home() {
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
       <section
         id="inicio"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden -mt-24 pt-24"
         style={{
           backgroundColor: '#f0ebe3',
           backgroundImage: 'url(/images/portada.webp)',
