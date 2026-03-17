@@ -80,7 +80,7 @@ export default function Home() {
 
           <motion.h1 variants={fadeUp} className="mb-4" style={{ lineHeight: 1.4 }}>
             <span className="block text-6xl sm:text-7xl md:text-8xl leading-none mb-0" style={{ fontFamily: "'Playfair Display', serif", color: '#1A1A1A', fontWeight: 700 }}>La paz</span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap" style={{ fontFamily: "'Great Vibes', cursive", color: '#1A1A1A', lineHeight: 1.4 }}>también se planifica</span>
+            <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap" style={{ fontFamily: "var(--font-great-vibes), 'Great Vibes', cursive", color: '#1A1A1A', lineHeight: 1.4 }}>también se planifica</span>
           </motion.h1>
 
           {/* Línea separadora gris */}
@@ -90,10 +90,10 @@ export default function Home() {
 
           <motion.p
             variants={fadeUp}
-            className="text-2xl sm:text-3xl leading-relaxed mb-10 italic"
+            className="text-xl sm:text-2xl md:text-3xl leading-relaxed mb-10 italic"
             style={{ fontFamily: "'Cormorant', serif", color: '#1A1A1A', fontWeight: 400, fontStyle: 'italic' }}
           >
-            Un memorial diseñado para<br />las familias de Esmeraldas
+            Un memorial diseñado para las familias de Esmeraldas
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex justify-center px-8">
@@ -101,7 +101,7 @@ export default function Home() {
               href="https://wa.me/593962788765"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-3 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 inline-block"
+              className="px-10 py-3 text-white font-bold text-base sm:text-xl whitespace-nowrap rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 inline-block"
               style={{
                 backgroundColor: '#4a6428',
                 fontFamily: "'Cormorant', serif",

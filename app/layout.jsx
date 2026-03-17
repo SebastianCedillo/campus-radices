@@ -1,6 +1,14 @@
 import '@/styles/globals.css';
+import { Great_Vibes } from 'next/font/google';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-great-vibes',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Campus Radices — Planificación Memorial | Esmeraldas',
@@ -10,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html lang="es" className={greatVibes.variable}>
       <body className="bg-radices-cream text-radices-text antialiased overflow-x-hidden">
         <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
           <Header />
