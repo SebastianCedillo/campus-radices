@@ -26,6 +26,7 @@ const inputClass =
 export default function ContactSection() {
   const [formData, setFormData] = useState({ nombre: '', apellido: '', telefono: '', correo: '', mensaje: '' });
   const [sent, setSent] = useState(false);
+  const [telefonoError, setTelefonoError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -163,10 +164,23 @@ export default function ContactSection() {
                 <label className="block text-sm font-semibold text-radices-darker mb-1.5">Teléfono *</label>
                 <input
                   type="tel" name="telefono" value={formData.telefono}
-                  onChange={(e) => { const v = e.target.value.replace(/[^\d+\s\-()]/g, ''); setFormData(prev => ({ ...prev, telefono: v })); }}
-                  required className={inputClass} placeholder="+593 99 XXX XXXX"
+                  onChange={(e) => {
+                    const raw = e.target.value;
+                    if (/[a-zA-Z]/.test(raw)) {
+                      setTelefonoError('Solo se permiten números');
+                      return;
+                    }
+                    const v = raw.replace(/[^\d]/g, '');
+                    if (v.length > 10) {
+                      setTelefonoError('El número no puede tener más de 10 dígitos');
+                      return;
+                    }
+                    setTelefonoError('');
+                    setFormData(prev => ({ ...prev, telefono: v }));
+                  }}
+                  required className={inputClass} placeholder="0999482328"
                 />
-                <p className="text-xs text-gray-400 mt-1">Solo se permiten números y el símbolo +</p>
+                {telefonoError && <p className="text-xs text-red-500 mt-1">{telefonoError}</p>}
               </div>
 
               <div>
