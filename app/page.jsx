@@ -42,22 +42,20 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-
-        {/* Fondo crema base */}
-        <div className="absolute inset-0 bg-[#f0ebe3]" />
-
-        {/* Imagen como marca de agua */}
-        <div className="absolute inset-0 opacity-40">
-          <Image
-            src="/images/portada.webp"
-            alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </div>
+      <section
+        id="inicio"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        style={{
+          backgroundColor: '#f0ebe3',
+          backgroundImage: 'url(/images/portada.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 1,
+        }}
+      >
+        {/* Overlay para efecto marca de agua */}
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(240, 235, 227, 0.62)' }} />
 
         {/* Contenido centrado */}
         <motion.div
