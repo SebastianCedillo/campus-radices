@@ -66,7 +66,7 @@ export default function Home() {
         >
           {/* Logo con fondo blanco */}
           <motion.div variants={fadeUp} className="flex justify-center mb-8">
-            <div className="rounded-full bg-white border-[3px] border-radices-dark" style={{ width: 210, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2px' }}>
+            <div className="rounded-full bg-white" style={{ width: 210, height: 210, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2px' }}>
               <Image
                 src="/images/logo_campus_radices.png"
                 alt="Campus Radices"
@@ -80,7 +80,7 @@ export default function Home() {
 
           <motion.h1 variants={fadeUp} className="mb-4" style={{ lineHeight: 1.4 }}>
             <span className="block text-6xl sm:text-7xl md:text-8xl leading-none mb-0" style={{ fontFamily: "'Playfair Display', serif", color: '#1A1A1A', fontWeight: 700 }}>La paz</span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap" style={{ fontFamily: "'Dancing Script', cursive", color: '#1A1A1A', fontWeight: 600, lineHeight: 1.4 }}>también se planifica</span>
+            <span className="block text-4xl sm:text-5xl md:text-6xl whitespace-nowrap" style={{ fontFamily: "'Great Vibes', cursive", color: '#1A1A1A', lineHeight: 1.4 }}>también se planifica</span>
           </motion.h1>
 
           {/* Línea separadora gris */}
@@ -91,7 +91,7 @@ export default function Home() {
           <motion.p
             variants={fadeUp}
             className="text-2xl sm:text-3xl leading-relaxed mb-10 italic"
-            style={{ fontFamily: "'Montserrat', sans-serif", color: '#1A1A1A', fontWeight: 300 }}
+            style={{ fontFamily: "'Cormorant', serif", color: '#1A1A1A', fontWeight: 400, fontStyle: 'italic' }}
           >
             Un memorial diseñado para<br />las familias de Esmeraldas
           </motion.p>
@@ -104,7 +104,7 @@ export default function Home() {
               className="px-10 py-3 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 inline-block"
               style={{
                 backgroundColor: '#4a6428',
-                fontFamily: "'Montserrat', sans-serif",
+                fontFamily: "'Cormorant', serif",
                 letterSpacing: '0.02em',
                 border: '2px solid #7a9e44',
                 boxShadow: 'inset 0 0 0 2px rgba(255,255,255,0.6)'
