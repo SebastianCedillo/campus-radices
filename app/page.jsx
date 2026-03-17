@@ -85,7 +85,7 @@ export default function Home() {
 
           {/* Línea separadora gris */}
           <motion.div variants={fadeUp} className="flex justify-center mb-5 mt-3">
-            <div className="h-[3px] w-96 bg-gray-400/70" />
+            <div className="h-[3px] bg-gray-400/70" style={{ width: '60%', maxWidth: '384px' }} />
           </motion.div>
 
           <motion.p
