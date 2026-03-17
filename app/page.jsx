@@ -42,7 +42,7 @@ export default function Home() {
     <div className="w-full">
 
       {/* ═══ HERO ════════════════════════════════════════════════════════════ */}
-      <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden rounded-3xl mx-2 my-2">
+      <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden">
 
         {/* Fondo crema base */}
         <div className="absolute inset-0 bg-[#f0ebe3]" />
