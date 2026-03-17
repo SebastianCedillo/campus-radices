@@ -24,7 +24,7 @@ const inputClass =
   'w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-radices-text font-body text-base focus:outline-none focus:border-radices-light focus:ring-2 focus:ring-radices-light/20 transition-all placeholder-gray-400';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ nombre: '', apellido: '', telefono: '', mensaje: '' });
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', telefono: '', correo: '', mensaje: '' });
   const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
@@ -34,10 +34,10 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const texto = `Hola, mi nombre es ${formData.nombre} ${formData.apellido}.${formData.telefono ? ` Mi teléfono es ${formData.telefono}.` : ''} ${formData.mensaje}`.trim();
+    const texto = `Hola, mi nombre es ${formData.nombre} ${formData.apellido}. Mi teléfono es ${formData.telefono}. Mi correo es ${formData.correo}. ${formData.mensaje}`.trim();
     const url = `https://wa.me/593962788765?text=${encodeURIComponent(texto)}`;
     window.open(url, '_blank');
-    setFormData({ nombre: '', apellido: '', telefono: '', mensaje: '' });
+    setFormData({ nombre: '', apellido: '', telefono: '', correo: '', mensaje: '' });
   };
 
   return (
@@ -165,6 +165,15 @@ export default function ContactSection() {
                   type="tel" name="telefono" value={formData.telefono}
                   onChange={handleChange} required
                   className={inputClass} placeholder="+593 99 XXX XXXX"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-radices-darker mb-1.5">Correo electrónico *</label>
+                <input
+                  type="email" name="correo" value={formData.correo}
+                  onChange={handleChange} required
+                  className={inputClass} placeholder="tucorreo@email.com"
                 />
               </div>
 
