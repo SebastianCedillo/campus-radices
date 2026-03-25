@@ -3,6 +3,32 @@
 export default function WhatsAppFloat() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      {/* TikTok */}
+      <a
+        href="https://www.tiktok.com/@campus_radices?_r=1&_t=ZS-94zZKyaP36G"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Seguir en TikTok"
+        className="w-12 h-12 bg-[#010101] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
+      >
+        <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/>
+        </svg>
+      </a>
+
+      {/* Facebook */}
+      <a
+        href="https://www.facebook.com/share/18EEXn7JPf/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Seguir en Facebook"
+        className="w-12 h-12 bg-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
+      >
+        <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+
       {/* Instagram */}
       <a
         href="https://instagram.com/campusradices"
