@@ -80,7 +80,7 @@ export default function Home() {
 
           <motion.h1 variants={fadeUp} className="mb-4" style={{ lineHeight: 1.4 }}>
             <span className="block text-6xl sm:text-7xl md:text-8xl leading-none mb-0" style={{ fontFamily: "'Playfair Display', serif", color: '#1A1A1A', fontWeight: 700 }}>La paz</span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl whitespace-nowrap" style={{ fontFamily: "var(--font-great-vibes), 'Great Vibes', cursive", color: '#1A1A1A', fontWeight: 400, lineHeight: 1.4 }}>también se planifica</span>
+            <span className="block text-6xl sm:text-7xl md:text-8xl whitespace-nowrap" style={{ fontFamily: "var(--font-great-vibes), 'Great Vibes', cursive", color: '#1A1A1A', fontWeight: 400, lineHeight: 1.4 }}>también se planifica</span>
           </motion.h1>
 
           {/* Línea separadora gris */}
