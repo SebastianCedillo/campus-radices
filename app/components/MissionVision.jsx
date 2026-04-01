@@ -27,7 +27,7 @@ export default function MissionVision() {
           <motion.span variants={fadeUp}
             className="text-2xl md:text-3xl font-semibold tracking-[0.25em] uppercase text-radices-light block mb-4"
           >
-            Quiénes somos
+            Quienes somos
           </motion.span>
           <motion.div variants={fadeUp} className="w-16 h-1 bg-radices-light mx-auto rounded-full" />
         </motion.div>
